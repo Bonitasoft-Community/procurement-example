@@ -21,7 +21,7 @@ This example demonstrates the following concepts:
 
 
 **Note:** this simplified version of the Procurement Request process only uses one actor.<br/>
-The same user can fill a procurement request and and approve it himself.
+The same user can fill a procurement request and approve it himself.
 
 ## Screenshots
 #### Procurement Living Application

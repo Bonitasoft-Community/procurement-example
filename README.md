@@ -1,2 +1,2 @@
-# Procurement
-This is an official example for Bonita BPM 7.0
+# Procurement Living Application
+This is an official Living Application example for Bonita BPM 7.0

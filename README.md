@@ -15,8 +15,8 @@ This example demonstrates the following concepts:
 3. Import the .bos file in your Bonita BPM Studio (it contains 3 processes: Procurement request, Init sample procurement data and Create supplier)
 4. Deploy all 3 processes (click on Run in a Studio but do not complete the forms)
 4. Run the sample data initialization process once and remove it from the Portal
-6. Import the 2 custom pages .zip files in your Portal
-7. Import the Procurement application .xml file in your Portal
+6. In the Portal, as an administrator, go to 'Resources' and add the 2 custom pages .zip files. You can read more about custom pages <a href="http://documentation.bonitasoft.com/pages">here</a>.
+7. In the Portal, go to 'Applications' and import the Procurement application.xml file. You can read more about applications <a href="http://documentation.bonitasoft.com/applications-0">here</a>.
 8. Run the Procurement application by accessing to this url (the port number may vary):<br/><a href="http://localhost:8080/bonita/apps/procurement">http://localhost:8080/bonita/apps/procurement</a>
 
 

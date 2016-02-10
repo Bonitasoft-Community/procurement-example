@@ -1,7 +1,7 @@
 # Procurement Living Application
 
 ## About
-This is an official Living Application example for Bonita BPM 7.0
+This is an official Living Application example for Bonita BPM 7
 
 This example demonstrates the following concepts:
 - Living Application

@@ -1,25 +1,23 @@
 # Procurement Living Application
 
 ## About
-This is an official Living Application example for Bonita BPM 7
+This is an official Living Application example for Bonita 7.
+It is build using Bonita 7.9.3 and is compatible with any future releases of Bonita 7.
 
 This example demonstrates the following concepts:
 - Living Application
-- Forms, pages and custom widgets built the UI Designer
+- Forms, pages and custom widgets built in the UI Designer
 - Process using BDM and contracts
 
 ## Installation
 
-1. Download the <a href="https://github.com/Bonitasoft-Community/procurement-example/releases">application bundle</a>
-2. Extract the bundle to a temporary folder
-3. Import the .bos file in your Bonita BPM Studio (it contains 3 processes: Procurement request, Init sample procurement data and Create supplier)
-4. Deploy all 3 processes (click on Run in a Studio but do not complete the forms)
-4. Run the sample data initialization process once and remove it from the Portal
-6. Export the Procurement application, go to 'Development->Application Descriptor->Export', select Procurement_application.xml and click on Export. 
-7. Export the application pages, go to the UI Designer, click on the Export icon for the Pages 'procurementRequestListing' and 'supplierListing'.
-8. In the Portal, as an administrator, go to 'Resources' and add the 2 custom pages .zip files. You can read more about custom pages <a href="http://documentation.bonitasoft.com/pages">here</a>.
-9. In the Portal, go to 'Applications' and import the Procurement application.xml file. You can read more about applications <a href="http://documentation.bonitasoft.com/applications-0">here</a>.
-10. Run the Procurement application by accessing to this url (the port number may vary):<br/><a href="http://localhost:8080/bonita/apps/procurement">http://localhost:8080/bonita/apps/procurement</a>
+1. Download the <a href="https://github.com/Bonitasoft-Community/procurement-example/releases">project .bos file</a>
+1. Import the .bos file in your Bonita Studio (it contains 3 processes: Procurement request, Init sample procurement data and Create supplier)
+1. Deploy all 3 processes: select the process in the **project explorer**, do a right click and select **Deploy**
+1. Run the sample data initialization process once and remove it from the Portal (using administration view)
+1. Deploy the two application pages: in the **project explorer**, select **Pages/Forms/Layouts**, select a page, do a right click and select **Deploy**. Do the same for the second page. You can read more about pages from the <a href="https://documentation.bonitasoft.com/bonita/7.9/pages">official documentation</a>.
+1. Deploy the application: in the **project explorer**, select **Application descriptors**, select _Procurement_application.xml_, do a right click and select **Deploy**. You can read more about applications in the <a href="https://documentation.bonitasoft.com/bonita/7.9/applications">official documentation</a>.
+10. Run the Procurement application by accessing to this URL (the port number may vary):<br/><a href="http://localhost:8080/bonita/apps/procurement">http://localhost:8080/bonita/apps/procurement</a>
 
 
 **Note:** this simplified version of the Procurement Request process only uses one actor.<br/>

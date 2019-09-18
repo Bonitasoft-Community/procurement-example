@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel modelVersion="1.0" productVersion="7.2.0.beta-02">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Request">
+            <description>Procurement request</description>
+            <fields>
+                <field type="LONG" length="255" name="caseId" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="summary" nullable="true" collection="false"/>
+                <field type="STRING" length="512" name="description" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="creationDate" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="createdBy" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="completionDate" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Supplier" fetchType="EAGER" name="selectedSupplier" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Quotation">
+            <description>Quotation sent to suppliers based on a request</description>
+            <fields>
+                <relationField type="AGGREGATION" reference="com.company.model.Request" fetchType="EAGER" name="request" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Supplier" fetchType="EAGER" name="supplier" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="hasSupplierAccepted" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="proposedPrice" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="comments" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findFromRequest" content="SELECT q &#xA;FROM Quotation q &#xA;WHERE q.request.persistenceId = :id" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="id" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Supplier">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="description" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="UNIQUE_NAME">
+                    <fieldNames>
+                        <fieldName>name</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries>
+                <query name="findById" content="SELECT s &#xA;FROM Supplier s &#xA;WHERE s.persistenceId = :id" returnType="com.company.model.Supplier">
+                    <queryParameters>
+                        <queryParameter name="id" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

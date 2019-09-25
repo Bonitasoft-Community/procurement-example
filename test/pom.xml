@@ -1,0 +1,164 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.bonitasoft.vacationmanagementexample</groupId>
+	<artifactId>integration-tests</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- server.url default value is override by CI configuration -->
+		<server.url>http://localhost:8080</server.url>
+		<bonita.version>7.9.3</bonita.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<configuration>
+					<systemPropertyVariables>
+						<property>
+							<propertyName>server.url</propertyName>
+						</property>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.assertj</groupId>
+				<artifactId>assertj-assertions-generator-maven-plugin</artifactId>
+				<version>2.1.0</version>
+
+				<!-- generate assertions at every build -->
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate-assertions</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<packages>
+						<param>com.company.model</param>
+					</packages>
+
+					<excludes>
+						<param>.*DAO</param>
+						<param>.*DAOImpl</param>
+					</excludes>
+				</configuration>
+
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.assertj</groupId>
+										<artifactId>assertj-assertions-generator-maven-plugin</artifactId>
+										<versionRange>[2.0.0,)</versionRange>
+										<goals>
+											<goal>generate-assertions</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<!-- Bonita BPM Engine Java client library to drive process execution -->
+		<dependency>
+			<groupId>com.bonitasoft.engine</groupId>
+			<artifactId>bonita-client-sp</artifactId>
+			<version>${bonita.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- JUnit as unit test framework -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- We need the Business Object Java classes definition -->
+		<dependency>
+			<groupId>com.company.model</groupId>
+			<artifactId>bdm-client</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+    
+		<!-- We need the Business Object Java classes definition (implementation of DAO) -->
+		<dependency>
+			<groupId>com.company.model</groupId>
+			<artifactId>bdm-dao</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Required for business object access -->
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.18.1-GA</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- To make assertion on business object easier -->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- For logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>1.7.28</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Server side library is needed to have commands definition -->
+		<dependency>
+			<groupId>com.bonitasoft.engine</groupId>
+			<artifactId>bonita-server-sp</artifactId>
+			<version>${bonita.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

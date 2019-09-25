@@ -6,10 +6,8 @@
 # BDM jar generated from the BDM definition (bom.xml)
 /lib/bdm-client-pojo.jar
 
-# You can also ignore in lib folder jar files related to connectors or actor filters provided by Bonita
-/lib/bonita-connector-email-impl-1.0.15.jar
-/lib/bonita-userfilter-initiator-impl-1.0.0-SNAPSHOT.jar
-
+# You can also ignore in lib folder jar files related to connector provided by Bonita
+# Actually they are usefull for automated test done with Bonita BCD module as they will not be provided by this module (only the Studio does provided them)
 
 # Classpath configuration for Bonita Studio. Automatically generated.
 .classpath
@@ -31,7 +29,8 @@
 
 # ACME test organization is provided by Bonita Studio.
 # You probably don't want to include it except if you did some customization.
-/organizations/ACME.organization
+# We include the organization as it is used in automated testing done by Bonita Continuous Delivery module.
+#/organizations/ACME.organization
 
 # Ignore the Groovy script sources provided with Bonita Studio.
 /src-providedGroovy
@@ -46,6 +45,9 @@
 
 # Web widgets provided by Bonita in the UI Designer.
 /web_widgets/pb*/
+
+# Ignore Maven target folder (can be used to build REST API extensions).
+target/
 
 # Gradle (can be used for example to build and package REST API extensions).
 

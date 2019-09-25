@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profiles:profiles xmlns:profiles="http://www.bonitasoft.org/ns/profile/6.1">
+    <profile name="User" isDefault="true">
+        <profileMapping>
+            <users/>
+            <groups/>
+            <memberships/>
+            <roles>
+                <role>member</role>
+            </roles>
+        </profileMapping>
+    </profile>
+    <profile name="Administrator" isDefault="true">
+        <profileMapping>
+            <users/>
+            <groups/>
+            <memberships/>
+            <roles>
+                <role>member</role>
+            </roles>
+        </profileMapping>
+    </profile>
+</profiles:profiles>

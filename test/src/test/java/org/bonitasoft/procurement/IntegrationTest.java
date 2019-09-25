@@ -112,7 +112,7 @@ public class IntegrationTest {
 
 		procurementRequestInputs.put("summary", CLAIM_SUMMARY);
 		procurementRequestInputs.put("description", CLAIM_DESCRIPTION);
-		procurementRequestInputs.put("suppliersIds", new ArrayList<>(Arrays.asList("1", "2", "3")));
+		procurementRequestInputs.put("supplierIds", new ArrayList<>(Arrays.asList("1", "2", "3")));
 
 		return procurementRequestInputs;
 	}

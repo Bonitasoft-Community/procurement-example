@@ -1,280 +1,304 @@
 {
-  "designerVersion" : "1.9.24",
-  "previousDesignerVersion" : "1.5.7",
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.9.24",
   "id" : "initSampleProcurementDataForm",
   "name" : "initSampleProcurementDataForm",
-  "lastUpdate" : 1568823355079,
-  "rows" : [ [ {
-    "type" : "component",
-    "dimension" : {
-      "xs" : 12
-    },
-    "propertyValues" : {
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "text" : {
-        "type" : "interpolation",
-        "value" : "This process will initialize some sample data (suppliers) for the Procurement Living Application."
-      },
-      "level" : {
-        "type" : "constant",
-        "value" : "Level 4"
-      },
-      "alignment" : {
-        "type" : "constant",
-        "value" : "center"
+  "lastUpdate" : 1620031983411,
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "This process will initialize some sample data (suppliers) for the Procurement Living Application."
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 4"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          }
+        },
+        "reference" : "a2946a3f-7d7e-497c-bffb-202bfd91d519",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
       }
-    },
-    "reference" : "a2946a3f-7d7e-497c-bffb-202bfd91d519",
-    "hasValidationError" : false,
-    "id" : "pbTitle"
-  } ], [ {
-    "type" : "component",
-    "dimension" : {
-      "xs" : 12
-    },
-    "propertyValues" : {
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "text" : {
-        "type" : "interpolation",
-        "value" : "This initialization process should be removed once the data is initialized."
-      },
-      "alignment" : {
-        "type" : "constant",
-        "value" : "center"
-      },
-      "allowHTML" : {
-        "type" : "constant",
-        "value" : true
-      },
-      "labelHidden" : {
-        "type" : "constant",
-        "value" : true
-      },
-      "label" : {
-        "type" : "interpolation",
-        "value" : ""
-      },
-      "labelPosition" : {
-        "type" : "constant",
-        "value" : "top"
-      },
-      "labelWidth" : {
-        "type" : "constant",
-        "value" : 4
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "This initialization process should be removed once the data is initialized."
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          }
+        },
+        "reference" : "56afff63-c5ef-494f-ab32-6db8126ec4ab",
+        "hasValidationError" : false,
+        "id" : "pbText"
       }
-    },
-    "reference" : "56afff63-c5ef-494f-ab32-6db8126ec4ab",
-    "hasValidationError" : false,
-    "id" : "pbText"
-  } ], [ {
-    "type" : "component",
-    "dimension" : {
-      "xs" : 12
-    },
-    "propertyValues" : {
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "expression",
-        "value" : "suppliers[0] == 0"
-      },
-      "message" : {
-        "type" : "variable",
-        "value" : "alreadyInitializedWarning.message"
-      },
-      "style" : {
-        "type" : "constant",
-        "value" : "alert-warning"
-      },
-      "isDismissible" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "label" : {
-        "type" : "interpolation",
-        "value" : "Warning:"
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "suppliers[0] == 0"
+          },
+          "message" : {
+            "type" : "variable",
+            "value" : "alreadyInitializedWarning.message"
+          },
+          "style" : {
+            "type" : "constant",
+            "value" : "alert-warning"
+          },
+          "isDismissible" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Warning:"
+          }
+        },
+        "reference" : "81c6215d-2362-4aa6-9395-aa312d7b16c2",
+        "hasValidationError" : false,
+        "id" : "customAlert"
       }
-    },
-    "reference" : "81c6215d-2362-4aa6-9395-aa312d7b16c2",
-    "hasValidationError" : false,
-    "id" : "customAlert"
-  } ], [ {
-    "type" : "component",
-    "dimension" : {
-      "xs" : 12
-    },
-    "propertyValues" : {
-      "alignment" : {
-        "type" : "constant",
-        "value" : "center"
-      },
-      "isDisplayed" : {
-        "type" : "constant",
-        "value" : true
-      },
-      "targetUrlOnSuccess" : {
-        "type" : "interpolation",
-        "value" : "/bonita/apps/procurement"
-      },
-      "class" : {
-        "type" : "constant",
-        "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
-      },
-      "label" : {
-        "type" : "interpolation",
-        "value" : "Initialize sample data"
-      },
-      "buttonStyle" : {
-        "type" : "constant",
-        "value" : "primary"
-      },
-      "dimension" : {
-        "type" : "constant",
-        "value" : 12
-      },
-      "collectionToModify" : {
-        "type" : "variable"
-      },
-      "widgetId" : {
-        "type" : "constant",
-        "value" : "pbButton"
-      },
-      "action" : {
-        "type" : "constant",
-        "value" : "Start process"
-      },
-      "labelHidden" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "dataToSend" : {
-        "type" : "constant"
-      },
-      "readonly" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "disabled" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "url" : {
-        "type" : "interpolation"
-      },
-      "dataFromSuccess" : {
-        "type" : "variable",
-        "value" : ""
-      },
-      "dataFromError" : {
-        "type" : "variable",
-        "value" : "error"
-      },
-      "collectionPosition" : {
-        "type" : "constant",
-        "value" : "Last"
-      },
-      "valueToAdd" : {
-        "type" : "constant"
-      },
-      "removeItem" : {
-        "type" : "variable"
-      },
-      "assign" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "responseStatusCode" : {
-        "type" : "variable",
-        "value" : ""
-      },
-      "closeOnSuccess" : {
-        "type" : "constant",
-        "value" : false
-      },
-      "modalId" : {
-        "type" : "constant",
-        "value" : ""
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          },
+          "isDisplayed" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "targetUrlOnSuccess" : {
+            "type" : "interpolation",
+            "value" : "/bonita/apps/procurement"
+          },
+          "class" : {
+            "type" : "constant",
+            "value" : "org.bonitasoft.web.designer.experimental.parametrizedWidget.ButtonWidget"
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Initialize sample data"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "collectionToModify" : {
+            "type" : "variable"
+          },
+          "widgetId" : {
+            "type" : "constant",
+            "value" : "pbButton"
+          },
+          "action" : {
+            "type" : "constant",
+            "value" : "Start process"
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "dataToSend" : {
+            "type" : "constant"
+          },
+          "readonly" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "disabled" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "url" : {
+            "type" : "interpolation"
+          },
+          "dataFromSuccess" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "dataFromError" : {
+            "type" : "variable",
+            "value" : "error"
+          },
+          "collectionPosition" : {
+            "type" : "constant",
+            "value" : "Last"
+          },
+          "valueToAdd" : {
+            "type" : "constant"
+          },
+          "removeItem" : {
+            "type" : "variable"
+          },
+          "assign" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "responseStatusCode" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "closeOnSuccess" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "modalId" : {
+            "type" : "constant",
+            "value" : ""
+          }
+        },
+        "reference" : "5971b469-7209-4d63-8117-5cdebf912220",
+        "hasValidationError" : false,
+        "id" : "pbButton"
       }
-    },
-    "reference" : "5971b469-7209-4d63-8117-5cdebf912220",
-    "hasValidationError" : false,
-    "id" : "pbButton"
-  } ], [ {
-    "type" : "component",
-    "dimension" : {
-      "xs" : 12
-    },
-    "propertyValues" : {
-      "cssClasses" : {
-        "type" : "constant",
-        "value" : ""
-      },
-      "hidden" : {
-        "type" : "expression",
-        "value" : "error == null"
-      },
-      "message" : {
-        "type" : "variable",
-        "value" : "error"
-      },
-      "style" : {
-        "type" : "constant",
-        "value" : "alert-danger"
-      },
-      "isDismissible" : {
-        "type" : "constant",
-        "value" : true
-      },
-      "label" : {
-        "type" : "interpolation",
-        "value" : "Error:"
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "error == null"
+          },
+          "message" : {
+            "type" : "variable",
+            "value" : "error"
+          },
+          "style" : {
+            "type" : "constant",
+            "value" : "alert-danger"
+          },
+          "isDismissible" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Error:"
+          }
+        },
+        "reference" : "e5f78542-0104-4072-aff0-2d8adb942d31",
+        "hasValidationError" : false,
+        "id" : "customAlert"
       }
-    },
-    "reference" : "e5f78542-0104-4072-aff0-2d8adb942d31",
-    "hasValidationError" : false,
-    "id" : "customAlert"
-  } ] ],
-  "assets" : [ {
-    "id" : "13d64a9a-eac7-4da7-a5ef-53dd44569735",
-    "name" : "style.css",
-    "type" : "css",
-    "order" : 1,
-    "external" : false
-  } ],
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "13d64a9a-eac7-4da7-a5ef-53dd44569735",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
   "inactiveAssets" : [ ],
-  "data" : {
+  "variables" : {
     "suppliers" : {
       "type" : "url",
-      "value" : "../API/bdm/businessData/com.company.model.Supplier?p=0&c=1&q=countForFind",
+      "value" : [
+        "../API/bdm/businessData/com.company.model.Supplier?p=0&c=1&q=countForFind"
+      ],
       "exposed" : false
     },
     "alreadyInitializedWarning" : {
       "type" : "json",
-      "value" : "{\n    \"message\": \"BDM is already initialized (some suppliers are already registered).<br/>Re-initializing it will duplicate data.\"\n}",
+      "value" : [
+        "{",
+        "    \"message\": \"BDM is already initialized (some suppliers are already registered).<br/>Re-initializing it will duplicate data.\"",
+        "}"
+      ],
       "exposed" : false
     },
     "error" : {

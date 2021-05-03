@@ -1,37 +1,48 @@
 {
-  "designerVersion" : "1.2.9",
+  "modelVersion" : "2.0",
+  "previousArtifactVersion" : "1.2.9",
   "id" : "customAlert",
   "name" : "alert",
-  "lastUpdate" : 1568821868068,
-  "template" : "<div ng-class=\"ctrl.getClasses()\" ng-show=\"properties.message\" role=\"alert\">\n    <button ng-if=\"properties.isDismissible\" ng-click=\"ctrl.dismiss()\" type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n    <b>{{properties.label}}</b> <span ng-bind-html=\"ctrl.getMessage()\"></span>\n</div>",
-  "controller" : "function WidgetalertController($scope, $sce) {\n    \n    this.getMessage = function () {\n        var message = $scope.properties.message;\n        if (angular.isObject(message) && message.message) {\n            message = message.message;\n        }\n        return $sce.trustAsHtml(message);\n    };\n    \n    this.getClasses = function () {\n        var classes = 'alert '+ $scope.properties.style;\n        if ($scope.properties.isDismissible)\n            classes += ' alert-dismissible';\n        return classes;\n    };\n    \n    this.dismiss = function() {\n        $scope.properties.message = null;\n    };\n}",
+  "lastUpdate" : 1620031983393,
+  "template" : "@customAlert.tpl.html",
+  "controller" : "@customAlert.ctrl.js",
   "description" : "Customizable Bootstrap alert",
   "custom" : true,
-  "properties" : [ {
-    "label" : "Message",
-    "name" : "message",
-    "type" : "text",
-    "bond" : "variable"
-  }, {
-    "label" : "Alert style",
-    "name" : "style",
-    "type" : "choice",
-    "defaultValue" : "alert-danger",
-    "choiceValues" : [ "alert-success", "alert-info", "alert-warning", "alert-danger" ],
-    "bond" : "expression"
-  }, {
-    "label" : "Is dismissible",
-    "name" : "isDismissible",
-    "type" : "boolean",
-    "defaultValue" : true,
-    "bond" : "expression"
-  }, {
-    "label" : "Label",
-    "name" : "label",
-    "type" : "text",
-    "defaultValue" : "Error:",
-    "bond" : "interpolation"
-  } ],
+  "properties" : [
+    {
+      "label" : "Message",
+      "name" : "message",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Alert style",
+      "name" : "style",
+      "type" : "choice",
+      "defaultValue" : "alert-danger",
+      "choiceValues" : [
+        "alert-success",
+        "alert-info",
+        "alert-warning",
+        "alert-danger"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Is dismissible",
+      "name" : "isDismissible",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Label",
+      "name" : "label",
+      "type" : "text",
+      "defaultValue" : "Error:",
+      "bond" : "interpolation"
+    }
+  ],
   "assets" : [ ],
   "requiredModules" : [ ],
   "type" : "widget",

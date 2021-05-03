@@ -4,9 +4,7 @@
 This is an official Living Application example for Bonita Community and Enterprise Editions.
 The latest release is built using Bonita 2021.1 and is compatible with any future releases of Bonita.
 
-:::info
-*If you are using an older version of Bonita, download the release corresponding to the version in question.*
-:::
+:information_source: *If you are using an older version of Bonita, download the release corresponding to the version in question.*
 
 This example demonstrates the following concepts:
 - Living Application
@@ -36,10 +34,8 @@ This example contains 3 process diagrams:
 10. Run the Procurement application by accessing to this URL (the port number may vary):<br/><a href="http://localhost:8080/bonita/apps/procurement">http://localhost:8080/bonita/apps/procurement</a>
 
 
-:::info
-**Note:** this simplified version of the Procurement Request process only uses one actor.<br/>
+:information_source: **Note:** this simplified version of the Procurement Request process only uses one actor.<br/>
 The same user can fill a procurement request and approve it himself.
-:::
 
 ## Screenshots
 #### Procurement Living Application

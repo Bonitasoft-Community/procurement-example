@@ -1,3 +1,4 @@
+
 # Output of source code compilation.
 # For example Bonita includes helper Groovy classes such as BonitaUsers (with for example getProcessInstanceInitiator method).
 # Sources (e.g. BonitaUsers.groovy) are located in src-providedGroovy folder and build result (e.g. BonitaUsers.class) is located in bin folder.
@@ -68,3 +69,13 @@ target/
 
 # IntelliJ Gradle integration configuration.
 **/.idea/**/gradle.xml
+
+
+bin
+/template
+/process_configurations
+node/
+node_modules/
+/web_fragments/.metadata
+/web_fragments/*/*.js
+!/web_widgets/*/*.ctrl.js

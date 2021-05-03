@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<businessObjectModel modelVersion="1.0" productVersion="7.2.0.beta-02">
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.2.0.beta-02">
     <businessObjects>
         <businessObject qualifiedName="com.company.model.Request">
             <description>Procurement request</description>
@@ -29,7 +29,7 @@
             </fields>
             <uniqueConstraints/>
             <queries>
-                <query name="findFromRequest" content="SELECT q &#xA;FROM Quotation q &#xA;WHERE q.request.persistenceId = :id" returnType="java.util.List">
+                <query name="findFromRequest" content="SELECT q &#10;FROM Quotation q &#10;WHERE q.request.persistenceId = :id" returnType="java.util.List">
                     <queryParameters>
                         <queryParameter name="id" className="java.lang.Long"/>
                     </queryParameters>
@@ -50,7 +50,7 @@
                 </uniqueConstraint>
             </uniqueConstraints>
             <queries>
-                <query name="findById" content="SELECT s &#xA;FROM Supplier s &#xA;WHERE s.persistenceId = :id" returnType="com.company.model.Supplier">
+                <query name="findById" content="SELECT s &#10;FROM Supplier s &#10;WHERE s.persistenceId = :id" returnType="com.company.model.Supplier">
                     <queryParameters>
                         <queryParameter name="id" className="java.lang.Long"/>
                     </queryParameters>

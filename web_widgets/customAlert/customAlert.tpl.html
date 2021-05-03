@@ -1,0 +1,4 @@
+<div ng-class="ctrl.getClasses()" ng-show="properties.message" role="alert">
+    <button ng-if="properties.isDismissible" ng-click="ctrl.dismiss()" type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <b>{{properties.label}}</b> <span ng-bind-html="ctrl.getMessage()"></span>
+</div>

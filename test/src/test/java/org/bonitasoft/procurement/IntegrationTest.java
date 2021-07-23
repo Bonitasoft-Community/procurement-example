@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.bonitasoft.engine.platform.Tenant;
 import org.bonitasoft.engine.api.ProcessAPI;
 import org.bonitasoft.engine.api.TenantAPIAccessor;
 import org.bonitasoft.engine.bpm.flownode.ActivityInstance;
@@ -72,11 +71,6 @@ public class IntegrationTest {
 	public void setUp() throws Exception {
 		ProcessExecutionDriver.prepareServer();
 	}
-
-	// @After
-	// public void tearDown() throws Exception {
-	//
-	// }
 
 	@Test
 	public void testHappyPath() throws Exception {

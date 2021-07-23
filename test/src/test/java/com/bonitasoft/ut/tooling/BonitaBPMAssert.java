@@ -14,7 +14,7 @@ import org.bonitasoft.engine.exception.BonitaException;
 import org.bonitasoft.engine.session.APISession;
 import org.junit.Assert;
 
-import com.bonitasoft.engine.api.APIClient;
+import org.bonitasoft.engine.api.APIClient;
 
 public class BonitaBPMAssert {
 

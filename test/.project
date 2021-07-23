@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Procurement Example</name>
-	<comment>7.13.0</comment>
+	<name>integration-tests</name>
+	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -17,9 +17,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.bonitasoft.studio.common.repository.bonitaNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>org.eclipse.jdt.groovy.core.groovyNature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
 </projectDescription>

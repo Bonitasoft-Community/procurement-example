@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.0",
-  "previousArtifactVersion" : "1.9.24",
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
   "id" : "procurementReviewQuotationsForm",
   "name" : "procurementReviewQuotationsForm",
-  "lastUpdate" : 1620031983610,
+  "lastUpdate" : 1627031348705,
   "rows" : [
     [
       {

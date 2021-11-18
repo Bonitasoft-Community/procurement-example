@@ -1,13 +1,6 @@
 {
-  "modelVersion" : "2.0",
-  "previousArtifactVersion" : "1.2.9",
-  "id" : "customListTransferButtons",
-  "name" : "listTransferButtons",
-  "lastUpdate" : 1620031983500,
-  "template" : "@customListTransferButtons.tpl.html",
-  "controller" : "@customListTransferButtons.ctrl.js",
-  "description" : "Buttons for transferring elements between two lists",
-  "custom" : true,
+  "modelVersion" : "2.2",
+  "previousArtifactVersion" : "2.0",
   "properties" : [
     {
       "label" : "Left list values",
@@ -40,6 +33,13 @@
       "bond" : "variable"
     }
   ],
+  "id" : "customListTransferButtons",
+  "name" : "listTransferButtons",
+  "lastUpdate" : 1627031348581,
+  "template" : "@customListTransferButtons.tpl.html",
+  "controller" : "@customListTransferButtons.ctrl.js",
+  "description" : "Buttons for transferring elements between two lists",
+  "custom" : true,
   "assets" : [ ],
   "requiredModules" : [ ],
   "type" : "widget",

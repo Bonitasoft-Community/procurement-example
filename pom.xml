@@ -8,7 +8,7 @@
   <name>Procurement Example</name>
   <description>Official Procurement Living Application example for Bonita</description>
   <properties>
-    <bonita.runtime.version>7.13.0-SNAPSHOT</bonita.runtime.version>
+    <bonita.runtime.version>7.13.0</bonita.runtime.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
     <maven.compiler.target>11</maven.compiler.target>
     <maven.compiler.source>11</maven.compiler.source>

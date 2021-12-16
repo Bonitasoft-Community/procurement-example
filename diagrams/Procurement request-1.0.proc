@@ -139,12 +139,13 @@
               <operator xmi:type="expression:Operator" xmi:id="_c97oL1EpEeyRA_m9wzMnTg" type="DOCUMENT_CREATE_UPDATE"/>
             </outputs>
           </connectors>
-          <connectors xmi:type="process:Connector" xmi:id="_selSkFEpEeyRA_m9wzMnTg" documentation="It works for uploading documents smaller than 4MB only. For documents greater than 4MB, you need to use createUploadSession in your POST url" name="uploadWordFile" definitionId="rest-file-put" event="ON_FINISH" definitionVersion="1.0.0">
+          <connectors xmi:type="process:Connector" xmi:id="_selSkFEpEeyRA_m9wzMnTg" documentation="It works for uploading documents smaller than 4MB only. For documents greater than 4MB, you need to use createUploadSession in your POST url" name="uploadWordFile" definitionId="rest-file-put" event="ON_FINISH" ignoreErrors="true" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_selSkVEpEeyRA_m9wzMnTg" definitionId="rest-file-put" version="1.0.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_selSklEpEeyRA_m9wzMnTg" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_selSk1EpEeyRA_m9wzMnTg" name="concatenateUploadURL" content="return 'https://graph.microsoft.com/v1.0/drives/b!0asHnxhOrU6O705ASVGiwuDDmRb5j6hAgWxDLeCHgERknFKEJn0cR5NdqThK2eLq/root:/Quote%20Requests/'+ sharepointCaseFolder + '/QuoteRequest-'+ request.caseId +'.docx:/content'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_selSlFEpEeyRA_m9wzMnTg" name="request" dataType="_yBZ9ohKsEeWPr7pxbi20Rg" className="com.company.model.Request"/>
-                  <referencedElements xmi:type="process:Data" xmi:id="_selSlVEpEeyRA_m9wzMnTg" documentation="the name of the folder created by the process" name="sharepointCaseFolder" dataType="_yBZ9nxKsEeWPr7pxbi20Rg"/>
+                <expression xmi:type="expression:Expression" xmi:id="_selSk1EpEeyRA_m9wzMnTg" name="concatenateUploadURL" content="return 'https://graph.microsoft.com/v1.0/drives/'+ sharepointParentFolder + '/root:/Quote%20Requests/'+ sharepointCaseFolder + '/QuoteRequest-'+ request.caseId +'.docx:/content'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hjeJAF6UEeypT86PGIy9Ug" name="request" dataType="_yBZ9ohKsEeWPr7pxbi20Rg" className="com.company.model.Request"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_hjeJAV6UEeypT86PGIy9Ug" documentation="the name of the folder created by the process" name="sharepointCaseFolder" dataType="_yBZ9nxKsEeWPr7pxbi20Rg"/>
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_hjeJAl6UEeypT86PGIy9Ug" name="sharepointParentFolder" typeClassname="java.lang.String" description="use this parameter to store the ID of the Sharepoint Drive that you need to use as part of the URL for your REST calls&#xD;&#xA;"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_selSllEpEeyRA_m9wzMnTg" key="contentType">
@@ -254,9 +255,10 @@
           <connectors xmi:type="process:Connector" xmi:id="_29KxUFEpEeyRA_m9wzMnTg" documentation="It works for uploading documents smaller than 4MB only. For documents greater than 4MB, you need to use createUploadSession in your POST url" name="uploadPDFFile" definitionId="rest-file-put" event="ON_FINISH" ignoreErrors="true" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_29KxUVEpEeyRA_m9wzMnTg" definitionId="rest-file-put" version="1.0.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxUlEpEeyRA_m9wzMnTg" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxU1EpEeyRA_m9wzMnTg" name="concatenateUploadPDFURL" content="return 'https://graph.microsoft.com/v1.0/drives/b!0asHnxhOrU6O705ASVGiwuDDmRb5j6hAgWxDLeCHgERknFKEJn0cR5NdqThK2eLq/root:/Quote%20Requests/'+ sharepointCaseFolder + '/QuoteRequest-'+ request.caseId +'-final.pdf:/content'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_29KxVFEpEeyRA_m9wzMnTg" name="request" dataType="_yBZ9ohKsEeWPr7pxbi20Rg" className="com.company.model.Request"/>
-                  <referencedElements xmi:type="process:Data" xmi:id="_29KxVVEpEeyRA_m9wzMnTg" documentation="the name of the folder created by the process" name="sharepointCaseFolder" dataType="_yBZ9nxKsEeWPr7pxbi20Rg"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxU1EpEeyRA_m9wzMnTg" name="concatenateUploadPDFURL" content="return 'https://graph.microsoft.com/v1.0/drives/'+ sharepointParentFolder +'/root:/Quote%20Requests/'+ sharepointCaseFolder + '/QuoteRequest-'+ request.caseId +'-final.pdf:/content'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_nR0y8F6UEeypT86PGIy9Ug" name="request" dataType="_yBZ9ohKsEeWPr7pxbi20Rg" className="com.company.model.Request"/>
+                  <referencedElements xmi:type="process:Data" xmi:id="_nR0y8V6UEeypT86PGIy9Ug" documentation="the name of the folder created by the process" name="sharepointCaseFolder" dataType="_yBZ9nxKsEeWPr7pxbi20Rg"/>
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_nR0y8l6UEeypT86PGIy9Ug" name="sharepointParentFolder" typeClassname="java.lang.String" description="use this parameter to store the ID of the Sharepoint Drive that you need to use as part of the URL for your REST calls&#xD;&#xA;"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxVlEpEeyRA_m9wzMnTg" key="contentType">
@@ -293,19 +295,19 @@
                 <expression xmi:type="expression:Expression" xmi:id="_29KxalEpEeyRA_m9wzMnTg" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29Kxa1EpEeyRA_m9wzMnTg" key="hostname_verifier">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxbFEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxbFEpEeyRA_m9wzMnTg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxbVEpEeyRA_m9wzMnTg" key="trust_store_file">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxblEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxblEpEeyRA_m9wzMnTg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29Kxb1EpEeyRA_m9wzMnTg" key="trust_store_password">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxcFEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxcFEpEeyRA_m9wzMnTg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxcVEpEeyRA_m9wzMnTg" key="key_store_file">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxclEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxclEpEeyRA_m9wzMnTg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29Kxc1EpEeyRA_m9wzMnTg" key="key_store_password">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxdFEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxdFEpEeyRA_m9wzMnTg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxdVEpEeyRA_m9wzMnTg" key="auth_type">
                 <expression xmi:type="expression:Expression" xmi:id="_29KxdlEpEeyRA_m9wzMnTg" name="NONE" content="NONE" returnTypeFixed="true"/>
@@ -329,19 +331,19 @@
                 <expression xmi:type="expression:Expression" xmi:id="_29KxglEpEeyRA_m9wzMnTg" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29Kxg1EpEeyRA_m9wzMnTg" key="proxy_protocol">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxhFEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxhFEpEeyRA_m9wzMnTg" name="HTTP" content="HTTP" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxhVEpEeyRA_m9wzMnTg" key="proxy_host">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxhlEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxhlEpEeyRA_m9wzMnTg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29Kxh1EpEeyRA_m9wzMnTg" key="proxy_port">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxiFEpEeyRA_m9wzMnTg" returnType="java.lang.Integer" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxiFEpEeyRA_m9wzMnTg" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxiVEpEeyRA_m9wzMnTg" key="proxy_username">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxilEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxilEpEeyRA_m9wzMnTg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29Kxi1EpEeyRA_m9wzMnTg" key="proxy_password">
-                <expression xmi:type="expression:Expression" xmi:id="_29KxjFEpEeyRA_m9wzMnTg" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_29KxjFEpEeyRA_m9wzMnTg" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxjVEpEeyRA_m9wzMnTg" key="socket_timeout_ms">
                 <expression xmi:type="expression:Expression" xmi:id="_29KxjlEpEeyRA_m9wzMnTg" name="60000" content="60000" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -423,7 +425,9 @@
           <connectors xmi:type="process:Connector" xmi:id="_lPReIFEnEeyRA_m9wzMnTg" documentation="use this call to generate the Azure AD token that you need to use in the other REST connectors as header" name="generateSharepointToken" definitionId="rest-post" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.3.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_lPReIVEnEeyRA_m9wzMnTg" definitionId="rest-post" version="1.3.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lPReIlEnEeyRA_m9wzMnTg" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_lPReI1EnEeyRA_m9wzMnTg" name="https://login.microsoftonline.com/6qxycl.onmicrosoft.com/oauth2/v2.0/token" content="https://login.microsoftonline.com/6qxycl.onmicrosoft.com/oauth2/v2.0/token" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lPReI1EnEeyRA_m9wzMnTg" name="prepareOAuthUrl()" content="'https://login.microsoftonline.com/' + sharepointTenant +'/oauth2/v2.0/token'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_SLADEFkWEeyvmZL7s4onFw" name="sharepointTenant" typeClassname="java.lang.String"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lPReJFEnEeyRA_m9wzMnTg" key="contentType">
                 <expression xmi:type="expression:Expression" xmi:id="_lPReJVEnEeyRA_m9wzMnTg" name="application/x-www-form-urlencoded" content="application/x-www-form-urlencoded" returnTypeFixed="true"/>
@@ -438,7 +442,10 @@
                 <expression xmi:type="expression:TableExpression" xmi:id="_lPReK1EnEeyRA_m9wzMnTg"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lPReLFEnEeyRA_m9wzMnTg" key="body">
-                <expression xmi:type="expression:Expression" xmi:id="_lPReLVEnEeyRA_m9wzMnTg" name="body()" content="'grant_type=client_credentials&amp;client_id=3ca95016-8e3f-42b4-b7f4-a8ef0a2865c5&amp;client_secret=.Mb7Q~W.VEUHS41Qw9v.Oah.7hWfG8sBUaL.N&amp;scope=https://graph.microsoft.com/.default'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_lPReLVEnEeyRA_m9wzMnTg" name="bodyAuthRequest()" content="'grant_type=client_credentials&amp;client_id='+ azureClientID + '&amp;client_secret='+ azureClientSecret +'&amp;scope=https://graph.microsoft.com/.default'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_egJa0FkWEeyvmZL7s4onFw" name="azureClientID" typeClassname="java.lang.String"/>
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_egJa0VkWEeyvmZL7s4onFw" name="azureClientSecret" typeClassname="java.lang.String"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lPReLlEnEeyRA_m9wzMnTg" key="do_not_follow_redirect">
                 <expression xmi:type="expression:Expression" xmi:id="_lPReL1EnEeyRA_m9wzMnTg" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
@@ -523,7 +530,9 @@
           <connectors xmi:type="process:Connector" xmi:id="_8sKmYFEnEeyRA_m9wzMnTg" documentation="create a folder named as your case ID" name="createSharepointFolder" definitionId="rest-post" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.3.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_8sKmYVEnEeyRA_m9wzMnTg" definitionId="rest-post" version="1.3.0" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_8sKmYlEnEeyRA_m9wzMnTg" key="url">
-                <expression xmi:type="expression:Expression" xmi:id="_8sKmY1EnEeyRA_m9wzMnTg" name="urlCreateFolder" content="'https://graph.microsoft.com/v1.0/drives/b!0asHnxhOrU6O705ASVGiwuDDmRb5j6hAgWxDLeCHgERknFKEJn0cR5NdqThK2eLq/root:/Quote%20Requests:/children'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_8sKmY1EnEeyRA_m9wzMnTg" name="urlCreateFolder" content="'https://graph.microsoft.com/v1.0/drives/'+ sharepointParentFolder +'/root:/Quote%20Requests:/children'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_IMi10FnaEeyPio-vlBT1kA" name="sharepointParentFolder" typeClassname="java.lang.String" description="use this parameter to store the ID of the Sharepoint Drive that you need to use as part of the URL for your REST calls&#xD;&#xA;"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_8sKmZFEnEeyRA_m9wzMnTg" key="contentType">
                 <expression xmi:type="expression:Expression" xmi:id="_8sKmZVEnEeyRA_m9wzMnTg" name="application/json" content="application/json" returnTypeFixed="true"/>
@@ -873,6 +882,9 @@
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_yBZ9gxKsEeWPr7pxbi20Rg" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_JeoowFEnEeyRA_m9wzMnTg" name="sharepointParentFolder" typeClassname="java.lang.String" description="use this parameter to store the ID of the Sharepoint Drive that you need to use as part of the URL for your REST calls&#xD;&#xA;"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_sVz_kFkVEeyvmZL7s4onFw" name="sharepointTenant" typeClassname="java.lang.String" description="The directory tenant that you want to request permission from. This can be in GUID or friendly name format (e.g. abcdef..onmicrosoft.com)"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_T_h7wFkWEeyvmZL7s4onFw" name="azureClientID" typeClassname="java.lang.String" description="The Application ID that the Azure app registration portal assigned when you registered your app."/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_UtX5MFkWEeyvmZL7s4onFw" name="azureClientSecret" typeClassname="java.lang.String" description="The Application Secret that you generated for your app in the app registration portal. Ensure that it is URL encoded."/>
       <contract xmi:type="process:Contract" xmi:id="_yBZ9hBKsEeWPr7pxbi20Rg">
         <inputs xmi:type="process:ContractInput" xmi:id="_j3FiHD79EeeFUpJtjfPkKQ" name="summary" description="Request summary">
           <mapping xmi:type="process:ContractInputMapping" xmi:id="_j3FiHT79EeeFUpJtjfPkKQ"/>

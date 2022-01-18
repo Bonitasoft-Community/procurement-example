@@ -11,6 +11,7 @@ This example demonstrates the following concepts:
 - Forms, pages and custom widgets built in the UI Designer
 - Process using BDM and contracts
 - Variable initialization using BonitaUsers templates
+- Document generation and Sharepoint integration (optional)
 
 This example contains 3 process diagrams:
 
@@ -26,7 +27,7 @@ This example contains 3 process diagrams:
 ## Installation
 
 1. Download the <a href="https://github.com/Bonitasoft-Community/procurement-example/releases">project .bos file</a>
-1. Import the .bos file in your Bonita Studio. 
+1. Import the .bos file in your Bonita Studio. (Optional: configure Sharepoint and Azure parameter values or put "test")
 1. Deploy all 3 processes: select the process in the **project explorer**, do a right click and select **Deploy**
 1. Run the sample data initialization process once and remove it from the Portal (using administration view)
 1. Deploy the two application pages: in the **project explorer**, select **Pages/Forms/Layouts**, select a page, do a right click and select **Deploy**. Do the same for the second page. You can read more about pages from the <a href="https://documentation.bonitasoft.com/bonita/7.9/pages">official documentation</a>.

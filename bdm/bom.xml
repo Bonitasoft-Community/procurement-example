@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.2.0.beta-02">
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
     <businessObjects>
-        <businessObject qualifiedName="com.company.model.Request">
-            <description>Procurement request</description>
-            <fields>
-                <field type="LONG" length="255" name="caseId" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="summary" nullable="true" collection="false"/>
-                <field type="STRING" length="512" name="description" nullable="true" collection="false"/>
-                <field type="LOCALDATE" length="255" name="creationDate" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="createdBy" nullable="false" collection="false"/>
-                <field type="STRING" length="255" name="status" nullable="false" collection="false"/>
-                <field type="LOCALDATE" length="255" name="completionDate" nullable="true" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Supplier" fetchType="EAGER" name="selectedSupplier" nullable="true" collection="false"/>
-            </fields>
-            <uniqueConstraints/>
-            <queries/>
-            <indexes/>
-        </businessObject>
         <businessObject qualifiedName="com.company.model.Quotation">
             <description>Quotation sent to suppliers based on a request</description>
             <fields>
@@ -35,6 +19,23 @@
                     </queryParameters>
                 </query>
             </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Request">
+            <description>Procurement request</description>
+            <fields>
+                <field type="LONG" length="255" name="caseId" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="summary" nullable="true" collection="false"/>
+                <field type="STRING" length="512" name="description" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="creationDate" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="createdBy" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="completionDate" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Supplier" fetchType="EAGER" name="selectedSupplier" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="storageUrl" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
             <indexes/>
         </businessObject>
         <businessObject qualifiedName="com.company.model.Supplier">

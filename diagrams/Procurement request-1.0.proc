@@ -657,7 +657,7 @@
         <elements xmi:type="process:TextAnnotation" xmi:id="_n1-KYNojEem3nK4z4KeV0A" text="User start the process with a summary and description of the request and a selection of potential suppliers."/>
         <elements xmi:type="process:TextAnnotation" xmi:id="_3NqtINojEem3nK4z4KeV0A" text="This task create one quotation object per selected supplier using an operation"/>
         <elements xmi:type="process:TextAnnotation" xmi:id="_8umwsNokEem3nK4z4KeV0A" text="User will select the supplier with the best quotation. If of the supplier is stored in the request business object."/>
-        <elements xmi:type="process:TextAnnotation" xmi:id="_KO1bgNolEem3nK4z4KeV0A" text="Update the request status"/>
+        <elements xmi:type="process:TextAnnotation" xmi:id="_KO1bgNolEem3nK4z4KeV0A" text="Update the request status. You may configure the Azure and Sharepoint credentials in the process parameters. "/>
         <filters xmi:type="process:ActorFilter" xmi:id="_zVaWgBTdEeWRxqJe6ExNNg" name="processInitiatorForRequestorLane" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
           <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_zVaWgRTdEeWRxqJe6ExNNg" definitionId="bonita-actorfilter-initiator" version="1.0">
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_zVaWghTdEeWRxqJe6ExNNg" key="autoAssign">
@@ -1012,7 +1012,7 @@
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_KO2CkdolEem3nK4z4KeV0A"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_KO2CktolEem3nK4z4KeV0A" fontName="Noto Sans"/>
               <styles xmi:type="notation:LineStyle" xmi:id="_KO2Ck9olEem3nK4z4KeV0A"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KO2ClNolEem3nK4z4KeV0A" x="839" y="140"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KO2ClNolEem3nK4z4KeV0A" x="839" y="140" width="173" height="94"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_yBZ9uBKsEeWPr7pxbi20Rg"/>
@@ -1068,7 +1068,7 @@
               <styles xmi:type="notation:DescriptionStyle" xmi:id="_NLTzstolEem3nK4z4KeV0A"/>
               <styles xmi:type="notation:FontStyle" xmi:id="_NLTzs9olEem3nK4z4KeV0A" fontName="Noto Sans"/>
               <styles xmi:type="notation:LineStyle" xmi:id="_NLTztNolEem3nK4z4KeV0A"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NLTztdolEem3nK4z4KeV0A" x="832" y="188"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NLTztdolEem3nK4z4KeV0A" x="832" y="188" width="142"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_yBZ9wxKsEeWPr7pxbi20Rg"/>

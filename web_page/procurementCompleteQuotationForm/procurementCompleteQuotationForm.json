@@ -3,7 +3,7 @@
   "previousArtifactVersion" : "2.2",
   "id" : "procurementCompleteQuotationForm",
   "name" : "procurementCompleteQuotationForm",
-  "lastUpdate" : 1665062134505,
+  "lastUpdate" : 1665070043041,
   "rows" : [
     [
       {
@@ -612,25 +612,17 @@
                   "type" : "constant",
                   "value" : false
                 },
-                "name" : {
-                  "type" : "constant",
-                  "value" : "price"
-                },
                 "required" : {
                   "type" : "constant",
                   "value" : true
                 },
-                "minLength" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "maxLength" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
                 "readOnly" : {
                   "type" : "constant",
                   "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 },
                 "labelHidden" : {
                   "type" : "constant",
@@ -655,10 +647,6 @@
                   "type" : "variable",
                   "value" : "sentData.price"
                 },
-                "type" : {
-                  "type" : "constant",
-                  "value" : "number"
-                },
                 "min" : {
                   "type" : "constant",
                   "value" : 0
@@ -666,14 +654,34 @@
                 "max" : {
                   "type" : "constant"
                 },
-                "allowHTML" : {
+                "maskCurrency" : {
                   "type" : "constant",
-                  "value" : true
+                  "value" : "€"
+                },
+                "orientation" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "indentation" : {
+                  "type" : "constant",
+                  "value" : "none"
+                },
+                "decimalSize" : {
+                  "type" : "constant",
+                  "value" : 2
+                },
+                "decimal" : {
+                  "type" : "constant",
+                  "value" : ","
+                },
+                "group" : {
+                  "type" : "constant",
+                  "value" : "whitespace"
                 }
               },
-              "reference" : "65f25e03-fc6e-43e0-80ea-1936a83b7796",
+              "reference" : "01778f4f-2b52-4c1d-b883-7758b29a6908",
               "hasValidationError" : false,
-              "id" : "pbInput"
+              "id" : "pbCurrencyInput"
             }
           ],
           [

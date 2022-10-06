@@ -3,7 +3,7 @@
   "previousArtifactVersion" : "2.2",
   "id" : "procurementRequestListing",
   "name" : "procurementRequestListing",
-  "lastUpdate" : 1665062134567,
+  "lastUpdate" : 1665069909513,
   "rows" : [
     [
       {
@@ -1238,7 +1238,7 @@
                           "supplier.name",
                           "status",
                           "hasSupplierAccepted | checkmark",
-                          "proposedPrice | currency",
+                          "proposedPrice | currency:\"€\"",
                           "comments"
                         ]
                       },

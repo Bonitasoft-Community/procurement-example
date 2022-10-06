@@ -5,7 +5,7 @@
   <groupId>org.bonitasoft.example</groupId>
   <artifactId>procurement-example</artifactId>
   <version>2.1</version>
-  <name>procurement-example2</name>
+  <name>procurement-example</name>
   <description>Official Procurement Living Application example for Bonita</description>
   <properties>
     <bonita.runtime.version>7.15.0</bonita.runtime.version>

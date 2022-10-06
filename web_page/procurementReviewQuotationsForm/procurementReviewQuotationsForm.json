@@ -3,7 +3,7 @@
   "previousArtifactVersion" : "2.2",
   "id" : "procurementReviewQuotationsForm",
   "name" : "procurementReviewQuotationsForm",
-  "lastUpdate" : 1665062134588,
+  "lastUpdate" : 1665064982731,
   "rows" : [
     [
       {
@@ -630,7 +630,7 @@
                   "value" : [
                     "supplier.name",
                     "hasSupplierAccepted | checkmark",
-                    "proposedPrice | currency",
+                    "proposedPrice | currency:\"€\"",
                     "comments"
                   ]
                 },

@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "2.0",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "procurementReviewQuotationsForm",
   "name" : "procurementReviewQuotationsForm",
-  "lastUpdate" : 1627031348705,
+  "lastUpdate" : 1665062134588,
   "rows" : [
     [
       {
@@ -81,6 +81,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "center"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "5d7e7cd7-ebdf-4d9f-b273-faefda04acb4",
@@ -114,6 +118,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "e8a8812f-0e65-4554-9790-d93d8cce7602",
@@ -529,6 +537,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "b4436800-a0cf-422d-ae2b-616289c57de9",
@@ -734,6 +746,10 @@
                 },
                 "removeItem" : {
                   "type" : "variable"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "d0d8f528-7f8d-470f-8fdb-2bc041c438a8",
@@ -821,6 +837,10 @@
                 },
                 "removeItem" : {
                   "type" : "variable"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "5e7c92fa-80bc-4bc1-b7e0-8d9541bb5dcf",

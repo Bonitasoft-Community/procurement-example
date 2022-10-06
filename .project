@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>procurement-example</name>
-	<comment>7.13.0</comment>
+	<comment>7.15.0</comment>
 	<projects>
 	</projects>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.bonitasoft.studio.common.repository.bonitaProjectValidationBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>

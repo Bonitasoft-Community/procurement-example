@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "2.0",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "createSupplierForm",
   "name" : "createSupplierForm",
-  "lastUpdate" : 1627031348366,
+  "lastUpdate" : 1665062134420,
   "rows" : [
     [
       {
@@ -109,6 +109,10 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "44902ee3-d77a-4d59-adec-af81536304c3",
@@ -231,6 +235,10 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "formInput.supplierInput.name"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "f7e044c0-12e3-4e02-acaf-f52b91291746",
@@ -288,6 +296,10 @@
                         "value" : {
                           "type" : "variable",
                           "value" : "formInput.supplierInput.description"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
                         }
                       },
                       "reference" : "8af89dce-75c1-43a5-b036-5d77f4a74e9d",
@@ -399,6 +411,10 @@
                   "modalId" : {
                     "type" : "constant",
                     "value" : ""
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "7334a333-c2e3-48e5-99eb-061bde9d9b1d",

@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "2.0",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "procurementRequestListing",
   "name" : "procurementRequestListing",
-  "lastUpdate" : 1627031348653,
+  "lastUpdate" : 1665062134567,
   "rows" : [
     [
       {
@@ -31,6 +31,10 @@
           "alignment" : {
             "type" : "constant",
             "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "66cb6986-e6eb-48ce-8183-9c6d32a60b3a",
@@ -115,6 +119,10 @@
           "buttonStyle" : {
             "type" : "constant",
             "value" : "primary"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "3317f307-2aab-45b1-adb7-609718ebd125",
@@ -288,6 +296,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "05b930b3-5cd4-409a-bdd5-ee77e906e6c9",
@@ -1041,6 +1053,10 @@
                       "buttonStyle" : {
                         "type" : "constant",
                         "value" : "primary"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
                       }
                     },
                     "reference" : "4c7431f5-c690-48c0-9a1d-7bc70e0ba5d4",
@@ -1126,6 +1142,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "7fe7f66a-bb36-4686-9047-2f8ebdd60b1e",

@@ -3,7 +3,7 @@
   "previousArtifactVersion" : "2.2",
   "id" : "procurementCompleteQuotationForm",
   "name" : "procurementCompleteQuotationForm",
-  "lastUpdate" : 1665070043041,
+  "lastUpdate" : 1665408638957,
   "rows" : [
     [
       {
@@ -664,7 +664,7 @@
                 },
                 "indentation" : {
                   "type" : "constant",
-                  "value" : "none"
+                  "value" : "whitespace"
                 },
                 "decimalSize" : {
                   "type" : "constant",

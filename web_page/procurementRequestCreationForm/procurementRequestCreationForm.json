@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "2.0",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "procurementRequestCreationForm",
   "name" : "procurementRequestCreationForm",
-  "lastUpdate" : 1627031348598,
+  "lastUpdate" : 1665062134541,
   "rows" : [
     [
       {
@@ -103,6 +103,10 @@
                   "alignment" : {
                     "type" : "constant",
                     "value" : "center"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "0c505fda-0d5b-4aa5-870f-634cd8661d8b",
@@ -159,6 +163,10 @@
                       "title" : {
                         "type" : "interpolation",
                         "value" : "Need"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
                       }
                     },
                     "reference" : "d01f3846-2b97-4b49-b65c-77db0d704e63",
@@ -299,6 +307,10 @@
                               },
                               "max" : {
                                 "type" : "constant"
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : true
                               }
                             },
                             "reference" : "f3b49a33-27d6-46f3-b0be-43f552595ed0",
@@ -356,6 +368,10 @@
                               "value" : {
                                 "type" : "variable",
                                 "value" : "sentData.description"
+                              },
+                              "allowHTML" : {
+                                "type" : "constant",
+                                "value" : true
                               }
                             },
                             "reference" : "031cf510-2120-46ef-a229-89bd0be78f12",
@@ -387,6 +403,10 @@
                       "title" : {
                         "type" : "interpolation",
                         "value" : "Suitable suppliers"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
                       }
                     },
                     "reference" : "26fdcd6a-de60-41c1-8954-34b5f212f664",
@@ -510,6 +530,10 @@
                                     "alignment" : {
                                       "type" : "constant",
                                       "value" : "center"
+                                    },
+                                    "allowHTML" : {
+                                      "type" : "constant",
+                                      "value" : true
                                     }
                                   },
                                   "reference" : "287100a9-1bac-455a-89cc-f3d26aad85a9",
@@ -670,6 +694,10 @@
                                     "alignment" : {
                                       "type" : "constant",
                                       "value" : "center"
+                                    },
+                                    "allowHTML" : {
+                                      "type" : "constant",
+                                      "value" : true
                                     }
                                   },
                                   "reference" : "8ed880f4-bb14-433c-9bc1-492679772dd3",
@@ -876,6 +904,10 @@
                   },
                   "removeItem" : {
                     "type" : "variable"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
                   }
                 },
                 "reference" : "897e38a6-ce21-4cdf-ba63-7b81fe54364f",

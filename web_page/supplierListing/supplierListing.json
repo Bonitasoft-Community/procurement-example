@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "2.0",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "supplierListing",
   "name" : "supplierListing",
-  "lastUpdate" : 1627031348747,
+  "lastUpdate" : 1665062134606,
   "rows" : [
     [
       {
@@ -31,6 +31,10 @@
           "alignment" : {
             "type" : "constant",
             "value" : "left"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
           }
         },
         "reference" : "149c2061-bf77-4cf9-b651-cdac562ff2bc",
@@ -168,6 +172,10 @@
                 },
                 "urlParams" : {
                   "type" : "constant"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "834887e7-fc31-4ad7-8ad7-520e854f217d",
@@ -285,6 +293,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "da728f34-3579-439b-81bd-45f13b2ed07b",

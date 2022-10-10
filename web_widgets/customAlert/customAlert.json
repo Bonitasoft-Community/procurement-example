@@ -1,6 +1,6 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "2.0",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "properties" : [
     {
       "label" : "Message",
@@ -38,7 +38,7 @@
   ],
   "id" : "customAlert",
   "name" : "alert",
-  "lastUpdate" : 1627031348441,
+  "lastUpdate" : 1665062134481,
   "template" : "@customAlert.tpl.html",
   "controller" : "@customAlert.ctrl.js",
   "description" : "Customizable Bootstrap alert",

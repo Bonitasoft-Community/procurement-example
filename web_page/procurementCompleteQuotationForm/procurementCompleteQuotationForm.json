@@ -1,9 +1,9 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "2.0",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "id" : "procurementCompleteQuotationForm",
   "name" : "procurementCompleteQuotationForm",
-  "lastUpdate" : 1627031348507,
+  "lastUpdate" : 1665408638957,
   "rows" : [
     [
       {
@@ -81,6 +81,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "center"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "9a8727c0-d01b-49de-afea-d0f9048e1dfd",
@@ -114,6 +118,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "1b8a3b03-4389-43a9-92cc-075a09b4e061",
@@ -529,6 +537,10 @@
                 "alignment" : {
                   "type" : "constant",
                   "value" : "left"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "aeba33ab-c647-4135-8eff-2fd8cd180fe1",
@@ -600,25 +612,17 @@
                   "type" : "constant",
                   "value" : false
                 },
-                "name" : {
-                  "type" : "constant",
-                  "value" : "price"
-                },
                 "required" : {
                   "type" : "constant",
                   "value" : true
                 },
-                "minLength" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "maxLength" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
                 "readOnly" : {
                   "type" : "constant",
                   "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 },
                 "labelHidden" : {
                   "type" : "constant",
@@ -643,21 +647,41 @@
                   "type" : "variable",
                   "value" : "sentData.price"
                 },
-                "type" : {
-                  "type" : "constant",
-                  "value" : "number"
-                },
                 "min" : {
                   "type" : "constant",
                   "value" : 0
                 },
                 "max" : {
                   "type" : "constant"
+                },
+                "maskCurrency" : {
+                  "type" : "constant",
+                  "value" : "€"
+                },
+                "orientation" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "indentation" : {
+                  "type" : "constant",
+                  "value" : "whitespace"
+                },
+                "decimalSize" : {
+                  "type" : "constant",
+                  "value" : 2
+                },
+                "decimal" : {
+                  "type" : "constant",
+                  "value" : ","
+                },
+                "group" : {
+                  "type" : "constant",
+                  "value" : "whitespace"
                 }
               },
-              "reference" : "65f25e03-fc6e-43e0-80ea-1936a83b7796",
+              "reference" : "01778f4f-2b52-4c1d-b883-7758b29a6908",
               "hasValidationError" : false,
-              "id" : "pbInput"
+              "id" : "pbCurrencyInput"
             }
           ],
           [
@@ -710,6 +734,10 @@
                 "value" : {
                   "type" : "variable",
                   "value" : "sentData.comments"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "c7b3aad8-aac1-428d-8d0a-73e1234c4309",
@@ -799,6 +827,10 @@
                 "modalId" : {
                   "type" : "constant",
                   "value" : ""
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "0ed190bd-56dc-4784-8916-449bffb16424",
@@ -886,6 +918,10 @@
                 "modalId" : {
                   "type" : "constant",
                   "value" : ""
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "c0885e7d-aaca-42b7-ae9f-42e45b09c20b",

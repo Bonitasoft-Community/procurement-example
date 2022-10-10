@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_RD8ycBKuEeWPr7pxbi20Rg" name="Create supplier" author="bonitasoft" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004" configId="ACED000574000E372E392E302D303032372E392E33">
+  <process:MainProcess xmi:id="_RD8ycBKuEeWPr7pxbi20Rg" name="Create supplier" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_RD8ycRKuEeWPr7pxbi20Rg" documentation="Creates a supplier" name="Create supplier">
       <elements xmi:type="process:Lane" xmi:id="_RD8ychKuEeWPr7pxbi20Rg" name="Employee" actor="_RD8ykBKuEeWPr7pxbi20Rg">
         <elements xmi:type="process:StartEvent" xmi:id="_RD8ycxKuEeWPr7pxbi20Rg" name="Fill supplier data" outgoing="_RD8yjRKuEeWPr7pxbi20Rg">

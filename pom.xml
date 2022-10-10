@@ -8,11 +8,11 @@
   <name>procurement-example</name>
   <description>Official Procurement Living Application example for Bonita</description>
   <properties>
-    <bonita.runtime.version>7.13.0</bonita.runtime.version>
+    <bonita.runtime.version>7.15.0</bonita.runtime.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
     <maven.compiler.target>11</maven.compiler.target>
     <maven.compiler.source>11</maven.compiler.source>
-    <bonita-project-maven-plugin.version>0.0.3</bonita-project-maven-plugin.version>
+    <bonita-project-maven-plugin.version>0.0.6</bonita-project-maven-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <build-helper-maven-plugin.version>3.2.0</build-helper-maven-plugin.version>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -44,12 +44,6 @@
       <artifactId>bonita-actorfilter-initiator</artifactId>
       <version>1.0.0</version>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.company.model</groupId>
-      <artifactId>bdm-client</artifactId>
-      <version>1.0.0</version>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
@@ -130,6 +124,12 @@
       <groupId>org.apache.xmlbeans</groupId>
       <artifactId>xmlbeans</artifactId>
       <version>3.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.company.model</groupId>
+      <artifactId>bdm-client</artifactId>
+      <version>1.0.0</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>

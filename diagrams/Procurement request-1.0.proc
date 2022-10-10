@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
-  <process:MainProcess xmi:id="_yBZV0BKsEeWPr7pxbi20Rg" name="Procurement request" author="bonitasoft" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004" configId="ACED000574000E372E392E302D303032372E392E33">
+  <process:MainProcess xmi:id="_yBZV0BKsEeWPr7pxbi20Rg" name="Procurement request" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_yBZV0RKsEeWPr7pxbi20Rg" documentation="Process for a procurement request" name="Procurement request">
       <elements xmi:type="process:Lane" xmi:id="_yBZ84BKsEeWPr7pxbi20Rg" name="Requestor" actor="_yBZ9gxKsEeWPr7pxbi20Rg">
         <elements xmi:type="process:StartEvent" xmi:id="_yBZ84RKsEeWPr7pxbi20Rg" name="Specify need &amp; identify suitable suppliers" outgoing="_el_woNofEem3nK4z4KeV0A">

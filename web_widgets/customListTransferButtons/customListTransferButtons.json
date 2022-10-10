@@ -1,6 +1,6 @@
 {
-  "modelVersion" : "2.2",
-  "previousArtifactVersion" : "2.0",
+  "modelVersion" : "2.3",
+  "previousArtifactVersion" : "2.2",
   "properties" : [
     {
       "label" : "Left list values",
@@ -35,7 +35,7 @@
   ],
   "id" : "customListTransferButtons",
   "name" : "listTransferButtons",
-  "lastUpdate" : 1627031348581,
+  "lastUpdate" : 1665062134538,
   "template" : "@customListTransferButtons.tpl.html",
   "controller" : "@customListTransferButtons.ctrl.js",
   "description" : "Buttons for transferring elements between two lists",

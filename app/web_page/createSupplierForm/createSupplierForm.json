@@ -1,9 +1,12 @@
 {
-  "modelVersion" : "2.3",
-  "previousArtifactVersion" : "2.2",
   "id" : "createSupplierForm",
   "name" : "createSupplierForm",
-  "lastUpdate" : 1665062134420,
+  "type" : "form",
+  "uuid" : "b9f98a70-ae41-45bf-8f73-739fb9e45e2d",
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "2.3",
+  "lastUpdate" : 1694006048991,
+  "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
       {
@@ -483,16 +486,6 @@
       }
     ]
   ],
-  "assets" : [
-    {
-      "id" : "e9c5d880-816f-4131-beb3-18ea5aa502f5",
-      "name" : "style.css",
-      "type" : "css",
-      "order" : 0,
-      "external" : false
-    }
-  ],
-  "inactiveAssets" : [ ],
   "variables" : {
     "formInput" : {
       "type" : "json",
@@ -531,8 +524,16 @@
       "exposed" : false
     }
   },
-  "hasValidationError" : false,
-  "uuid" : "b9f98a70-ae41-45bf-8f73-739fb9e45e2d",
-  "type" : "form",
-  "description" : "Page generated with Bonita UI designer"
+  "assets" : [
+    {
+      "id" : "e9c5d880-816f-4131-beb3-18ea5aa502f5",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
 }

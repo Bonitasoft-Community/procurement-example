@@ -1,6 +1,14 @@
 {
-  "modelVersion" : "2.3",
-  "previousArtifactVersion" : "2.2",
+  "id" : "customAlert",
+  "name" : "alert",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "2.3",
+  "lastUpdate" : 1694006049195,
+  "description" : "Customizable Bootstrap alert",
+  "template" : "@customAlert.tpl.html",
+  "controller" : "@customAlert.ctrl.js",
   "properties" : [
     {
       "label" : "Message",
@@ -36,15 +44,8 @@
       "bond" : "interpolation"
     }
   ],
-  "id" : "customAlert",
-  "name" : "alert",
-  "lastUpdate" : 1665062134481,
-  "template" : "@customAlert.tpl.html",
-  "controller" : "@customAlert.ctrl.js",
-  "description" : "Customizable Bootstrap alert",
-  "custom" : true,
   "assets" : [ ],
   "requiredModules" : [ ],
-  "type" : "widget",
+  "webResources" : [ ],
   "hasHelp" : false
 }

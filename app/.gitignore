@@ -1,0 +1,81 @@
+
+# Output of source code compilation.
+# For example Bonita includes helper Groovy classes such as BonitaUsers (with for example getProcessInstanceInitiator method).
+# Sources (e.g. BonitaUsers.groovy) are located in src-providedGroovy folder and build result (e.g. BonitaUsers.class) is located in bin folder.
+/bin
+
+# BDM jar generated from the BDM definition (bom.xml)
+/lib/bdm-client-pojo.jar
+
+# You can also ignore in lib folder jar files related to connector provided by Bonita
+# Actually they are usefull for automated test done with Bonita BCD module as they will not be provided by this module (only the Studio does provided them)
+
+# Classpath configuration for Bonita Studio. Automatically generated.
+.classpath
+
+# Project settings. Studio is able to create them with appropriate default value if needed.
+.settings
+
+# Should be created by the Studio if needed.
+/META-INF
+
+# Should be created by the Studio if needed.
+/build.properties
+
+# If you don't use database connectors you can safely ignore the content of database_connectors_properties folder
+/database_connectors_properties
+
+# h2 database information are only used when testing application in Bonita Studio.
+/h2_database
+
+# ACME test organization is provided by Bonita Studio.
+# You probably don't want to include it except if you did some customization.
+# We include the organization as it is used in automated testing done by Bonita Continuous Delivery module.
+#/organizations/ACME.organization
+
+# Ignore the Groovy script sources provided with Bonita Studio.
+/src-providedGroovy
+
+# Web component user individual preferences (e.g. bookmarked,...).
+/web_widgets/.metadata
+/web_page/.metadata
+
+# Output of web component build
+/web_widgets/*/*.js
+/web_page/*/js
+
+# Web widgets provided by Bonita in the UI Designer.
+/web_widgets/pb*/
+
+# Ignore Maven target folder (can be used to build REST API extensions).
+target/
+
+# Gradle (can be used for example to build and package REST API extensions).
+
+# Ignore Gradle generated files.
+.gradle
+**/build/
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored).
+!gradle-wrapper.jar
+
+# IntelliJ (can be used for example to create a REST API extension).
+
+# Ignore IntelliJ output folder.
+**/out/
+
+# IntelliJ user workspace configuration.
+**/.idea/**/workspace.xml
+
+# IntelliJ Gradle integration configuration.
+**/.idea/**/gradle.xml
+
+
+bin
+/template
+#/process_configurations
+node/
+node_modules/
+/web_fragments/.metadata
+/web_fragments/*/*.js
+!/web_widgets/*/*.ctrl.js

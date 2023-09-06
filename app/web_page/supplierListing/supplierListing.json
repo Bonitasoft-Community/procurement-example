@@ -1,9 +1,12 @@
 {
-  "modelVersion" : "2.3",
-  "previousArtifactVersion" : "2.2",
   "id" : "supplierListing",
   "name" : "supplierListing",
-  "lastUpdate" : 1665062134606,
+  "type" : "page",
+  "uuid" : "22b348dd-65be-4592-b6c3-fd0292899189",
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "2.3",
+  "lastUpdate" : 1694006259173,
+  "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
       {
@@ -146,16 +149,18 @@
                 },
                 "type" : {
                   "type" : "constant",
-                  "value" : "URL"
+                  "value" : "process"
                 },
                 "pageToken" : {
                   "type" : "constant"
                 },
                 "processName" : {
-                  "type" : "constant"
+                  "type" : "expression",
+                  "value" : "createSupplierProcesses[0].name"
                 },
                 "processVersion" : {
-                  "type" : "constant"
+                  "type" : "expression",
+                  "value" : "createSupplierProcesses[0].version"
                 },
                 "taskId" : {
                   "type" : "constant"
@@ -553,16 +558,6 @@
       }
     ]
   ],
-  "assets" : [
-    {
-      "id" : "52b5a40f-1d8a-4d0b-92f4-52de5d799028",
-      "name" : "style.css",
-      "type" : "css",
-      "order" : 1,
-      "external" : false
-    }
-  ],
-  "inactiveAssets" : [ ],
   "variables" : {
     "createSupplierProcesses" : {
       "type" : "url",
@@ -575,16 +570,6 @@
       "type" : "constant",
       "exposed" : false
     },
-    "getCreateSupplierUrl" : {
-      "type" : "expression",
-      "value" : [
-        "if ($data.createSupplierProcesses && $data.createSupplierProcesses.length) {\r",
-        "    var process = $data.createSupplierProcesses[0];\r",
-        "    return \"/bonita/portal/resource/process/\"+ encodeURI(process.name) +\"/\" + process.version + \"/content/?id=\" + process.id +\"&senderUrl=\"+ window.top.location.href;\r",
-        "}"
-      ],
-      "exposed" : false
-    },
     "allSuppliers" : {
       "type" : "url",
       "value" : [
@@ -593,8 +578,21 @@
       "exposed" : false
     }
   },
-  "hasValidationError" : false,
-  "uuid" : "22b348dd-65be-4592-b6c3-fd0292899189",
-  "type" : "page",
-  "description" : "Page generated with Bonita UI designer"
+  "assets" : [
+    {
+      "id" : "52b5a40f-1d8a-4d0b-92f4-52de5d799028",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [
+    {
+      "method" : "post",
+      "value" : "bpm/process/*/instantiation"
+    }
+  ],
+  "hasValidationError" : false
 }

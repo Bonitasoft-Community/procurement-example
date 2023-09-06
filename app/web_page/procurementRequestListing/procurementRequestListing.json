@@ -1,9 +1,12 @@
 {
-  "modelVersion" : "2.3",
-  "previousArtifactVersion" : "2.2",
   "id" : "procurementRequestListing",
   "name" : "procurementRequestListing",
-  "lastUpdate" : 1665069909513,
+  "type" : "page",
+  "uuid" : "b003d7d9-5441-4071-b6df-71c0c4f470f8",
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "2.3",
+  "lastUpdate" : 1694006324697,
+  "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
       {
@@ -123,6 +126,37 @@
           "allowHTML" : {
             "type" : "constant",
             "value" : true
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "process"
+          },
+          "pageToken" : {
+            "type" : "constant"
+          },
+          "processName" : {
+            "type" : "expression",
+            "value" : "procurementProcesses[0].name"
+          },
+          "processVersion" : {
+            "type" : "expression",
+            "value" : "procurementProcesses[0].version"
+          },
+          "taskId" : {
+            "type" : "constant"
+          },
+          "caseId" : {
+            "type" : "constant"
+          },
+          "target" : {
+            "type" : "constant",
+            "value" : "_self"
+          },
+          "appToken" : {
+            "type" : "constant"
+          },
+          "urlParams" : {
+            "type" : "constant"
           }
         },
         "reference" : "3317f307-2aab-45b1-adb7-609718ebd125",
@@ -1274,23 +1308,6 @@
       }
     ]
   ],
-  "assets" : [
-    {
-      "id" : "ca72a73a-71da-430d-837a-76de9c0ebec7",
-      "name" : "customPageAssets.js",
-      "type" : "js",
-      "order" : 1,
-      "external" : false
-    },
-    {
-      "id" : "3df7ef17-fe74-4e62-9737-dd68b697da7c",
-      "name" : "style.css",
-      "type" : "css",
-      "order" : 2,
-      "external" : false
-    }
-  ],
-  "inactiveAssets" : [ ],
   "variables" : {
     "request" : {
       "type" : "constant",
@@ -1329,16 +1346,6 @@
       ],
       "exposed" : false
     },
-    "getProcurementProcessStartUrl" : {
-      "type" : "expression",
-      "value" : [
-        "if ($data.procurementProcesses && $data.procurementProcesses.length) {",
-        "    var process = $data.procurementProcesses[0];",
-        "    return \"/bonita/portal/resource/process/\"+ encodeURI(process.name) +\"/\" + process.version + \"/content/?id=\" + process.id +\"&senderUrl=\"+ window.top.location.href;",
-        "}"
-      ],
-      "exposed" : false
-    },
     "requestQuotations" : {
       "type" : "url",
       "value" : [
@@ -1347,8 +1354,28 @@
       "exposed" : false
     }
   },
-  "hasValidationError" : false,
-  "uuid" : "b003d7d9-5441-4071-b6df-71c0c4f470f8",
-  "type" : "page",
-  "description" : "Page generated with Bonita UI designer"
+  "assets" : [
+    {
+      "id" : "ca72a73a-71da-430d-837a-76de9c0ebec7",
+      "name" : "customPageAssets.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "3df7ef17-fe74-4e62-9737-dd68b697da7c",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [
+    {
+      "method" : "post",
+      "value" : "bpm/userTask/*/execution"
+    }
+  ],
+  "hasValidationError" : false
 }

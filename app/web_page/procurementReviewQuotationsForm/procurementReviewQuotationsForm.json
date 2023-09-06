@@ -1,9 +1,12 @@
 {
-  "modelVersion" : "2.3",
-  "previousArtifactVersion" : "2.2",
-  "id" : "procurementCompleteQuotationForm",
-  "name" : "procurementCompleteQuotationForm",
-  "lastUpdate" : 1665408638957,
+  "id" : "procurementReviewQuotationsForm",
+  "name" : "procurementReviewQuotationsForm",
+  "type" : "form",
+  "uuid" : "d5c2669f-f688-43e6-ace9-dc475ed6833c",
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "2.3",
+  "lastUpdate" : 1694006049293,
+  "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
       {
@@ -25,7 +28,7 @@
             "value" : ""
           }
         },
-        "reference" : "52d77d20-8a0a-4f2a-8bd6-521c0f412dfe",
+        "reference" : "75e906ca-c124-4349-8193-c695980a69a2",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -51,7 +54,7 @@
             "value" : ""
           }
         },
-        "reference" : "929ac87d-8471-47d8-a966-688b8238ad8f",
+        "reference" : "2287adb5-2670-4663-b2d7-d3cc84650c14",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -72,7 +75,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "Complete quotation"
+                  "value" : "Review quotations & select supplier"
                 },
                 "level" : {
                   "type" : "constant",
@@ -87,7 +90,7 @@
                   "value" : true
                 }
               },
-              "reference" : "9a8727c0-d01b-49de-afea-d0f9048e1dfd",
+              "reference" : "5d7e7cd7-ebdf-4d9f-b273-faefda04acb4",
               "hasValidationError" : false,
               "id" : "pbTitle"
             }
@@ -124,7 +127,7 @@
                   "value" : true
                 }
               },
-              "reference" : "1b8a3b03-4389-43a9-92cc-075a09b4e061",
+              "reference" : "e8a8812f-0e65-4554-9790-d93d8cce7602",
               "hasValidationError" : false,
               "id" : "pbTitle"
             }
@@ -173,7 +176,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "23be8795-4bb1-4a47-9016-a4d225e3e74a",
+              "reference" : "38070ea2-929f-4b17-bcac-4f08292bf1e7",
               "hasValidationError" : false,
               "id" : "pbText"
             },
@@ -220,7 +223,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "a702b4e1-22b4-4bd8-9e7b-d9fbf51c4d2e",
+              "reference" : "22609372-2fd0-44e2-9e87-646857826767",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -269,7 +272,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "44a1ecd1-b5a9-4340-8768-e318284b6ad9",
+              "reference" : "17b2333b-f658-4816-85fd-41a04ce8b775",
               "hasValidationError" : false,
               "id" : "pbText"
             },
@@ -316,7 +319,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "25bf2b95-aaf1-4c6f-bcc8-872b2dc8fcc2",
+              "reference" : "c6a4c60a-4ff8-4496-b260-33446d65f451",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -365,7 +368,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "c43e083e-355e-4023-96c7-0b2264db99b6",
+              "reference" : "a6115b70-82f1-4057-a5c3-c003d3b39c1e",
               "hasValidationError" : false,
               "id" : "pbText"
             },
@@ -412,7 +415,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "3f1816b9-5a57-442c-a7c2-e13dc7b7d9ac",
+              "reference" : "d2152e26-b6a9-4b1b-8d01-2975297a33b0",
               "hasValidationError" : false,
               "id" : "pbText"
             },
@@ -459,7 +462,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "07c44a3d-a58d-476d-9c08-379aa03d24e5",
+              "reference" : "b58bbc3f-ba53-4375-9d26-fc6bacc84fa0",
               "hasValidationError" : false,
               "id" : "pbText"
             },
@@ -506,7 +509,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "25c584a7-ff63-4cf3-b68c-dee64a34aef1",
+              "reference" : "49b9af35-00a4-4d14-83ed-39d97d4a8545",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -528,7 +531,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "Your quotation on behalf of {{quotation.supplier.name}}"
+                  "value" : "Quotations"
                 },
                 "level" : {
                   "type" : "constant",
@@ -543,7 +546,7 @@
                   "value" : true
                 }
               },
-              "reference" : "aeba33ab-c647-4135-8eff-2fd8cd180fe1",
+              "reference" : "b4436800-a0cf-422d-ae2b-616289c57de9",
               "hasValidationError" : false,
               "id" : "pbTitle"
             }
@@ -565,7 +568,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "<b>Provide a quotation for this procurement request.</b>"
+                  "value" : "<b>Select a quotation for this procurement request.</b>"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -592,7 +595,7 @@
                   "value" : 4
                 }
               },
-              "reference" : "4786813d-ead2-4030-84a0-86de8761ff61",
+              "reference" : "f627f8d7-c1c4-44ad-9357-157ae1e2e417",
               "hasValidationError" : false,
               "id" : "pbText"
             }
@@ -612,137 +615,56 @@
                   "type" : "constant",
                   "value" : false
                 },
-                "required" : {
+                "headers" : {
                   "type" : "constant",
-                  "value" : true
+                  "value" : [
+                    "Supplier",
+                    "Accepted",
+                    "Proposed price",
+                    "Comments"
+                  ]
                 },
-                "readOnly" : {
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "quotations"
+                },
+                "columnsKey" : {
                   "type" : "constant",
-                  "value" : false
+                  "value" : [
+                    "supplier.name",
+                    "hasSupplierAccepted | checkmark",
+                    "proposedPrice | currency:\"€\"",
+                    "comments"
+                  ]
+                },
+                "selectedRow" : {
+                  "type" : "variable",
+                  "value" : "selectedQuotation"
+                },
+                "content" : {
+                  "type" : "expression",
+                  "value" : "quotations"
                 },
                 "allowHTML" : {
                   "type" : "constant",
+                  "value" : false
+                },
+                "striped" : {
+                  "type" : "constant",
                   "value" : true
                 },
-                "labelHidden" : {
+                "condensed" : {
                   "type" : "constant",
                   "value" : false
                 },
-                "label" : {
-                  "type" : "interpolation",
-                  "value" : "Proposed price"
-                },
-                "labelPosition" : {
+                "bordered" : {
                   "type" : "constant",
-                  "value" : "left"
-                },
-                "labelWidth" : {
-                  "type" : "constant",
-                  "value" : 2
-                },
-                "placeholder" : {
-                  "type" : "interpolation"
-                },
-                "value" : {
-                  "type" : "variable",
-                  "value" : "sentData.price"
-                },
-                "min" : {
-                  "type" : "constant",
-                  "value" : 0
-                },
-                "max" : {
-                  "type" : "constant"
-                },
-                "maskCurrency" : {
-                  "type" : "constant",
-                  "value" : "€"
-                },
-                "orientation" : {
-                  "type" : "constant",
-                  "value" : "right"
-                },
-                "indentation" : {
-                  "type" : "constant",
-                  "value" : "whitespace"
-                },
-                "decimalSize" : {
-                  "type" : "constant",
-                  "value" : 2
-                },
-                "decimal" : {
-                  "type" : "constant",
-                  "value" : ","
-                },
-                "group" : {
-                  "type" : "constant",
-                  "value" : "whitespace"
+                  "value" : false
                 }
               },
-              "reference" : "01778f4f-2b52-4c1d-b883-7758b29a6908",
+              "reference" : "ff5e4de0-b575-4055-8f7b-6ee7706018e8",
               "hasValidationError" : false,
-              "id" : "pbCurrencyInput"
-            }
-          ],
-          [
-            {
-              "type" : "component",
-              "dimension" : {
-                "xs" : 12
-              },
-              "propertyValues" : {
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "readOnly" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "required" : {
-                  "type" : "constant",
-                  "value" : true
-                },
-                "minLength" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "maxLength" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "labelHidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "label" : {
-                  "type" : "interpolation",
-                  "value" : "Comments"
-                },
-                "labelPosition" : {
-                  "type" : "constant",
-                  "value" : "left"
-                },
-                "labelWidth" : {
-                  "type" : "constant",
-                  "value" : 2
-                },
-                "value" : {
-                  "type" : "variable",
-                  "value" : "sentData.comments"
-                },
-                "allowHTML" : {
-                  "type" : "constant",
-                  "value" : true
-                }
-              },
-              "reference" : "c7b3aad8-aac1-428d-8d0a-73e1234c4309",
-              "hasValidationError" : false,
-              "id" : "pbTextarea"
+              "id" : "pbTable"
             }
           ],
           [
@@ -761,12 +683,12 @@
                   "value" : false
                 },
                 "disabled" : {
-                  "type" : "expression",
-                  "value" : "sentData.comments == null"
+                  "type" : "constant",
+                  "value" : false
                 },
                 "label" : {
                   "type" : "interpolation",
-                  "value" : "I don't want to answer"
+                  "value" : "Abort procurement request"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -785,7 +707,7 @@
                 },
                 "dataToSend" : {
                   "type" : "expression",
-                  "value" : "onRejectQuotation"
+                  "value" : "onAbortRequest"
                 },
                 "dataFromSuccess" : {
                   "type" : "variable",
@@ -809,9 +731,6 @@
                   "type" : "interpolation",
                   "value" : "/bonita/apps/procurement"
                 },
-                "removeItem" : {
-                  "type" : "variable"
-                },
                 "assign" : {
                   "type" : "constant",
                   "value" : false
@@ -828,12 +747,15 @@
                   "type" : "constant",
                   "value" : ""
                 },
+                "removeItem" : {
+                  "type" : "variable"
+                },
                 "allowHTML" : {
                   "type" : "constant",
                   "value" : true
                 }
               },
-              "reference" : "0ed190bd-56dc-4784-8916-449bffb16424",
+              "reference" : "d0d8f528-7f8d-470f-8fdb-2bc041c438a8",
               "hasValidationError" : false,
               "id" : "pbButton"
             },
@@ -853,11 +775,11 @@
                 },
                 "disabled" : {
                   "type" : "expression",
-                  "value" : "sentData.price == null"
+                  "value" : "selectedQuotation == null || !selectedQuotation.hasSupplierAccepted"
                 },
                 "label" : {
                   "type" : "interpolation",
-                  "value" : "Create quotation"
+                  "value" : "Accept selected quotation"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -876,7 +798,7 @@
                 },
                 "dataToSend" : {
                   "type" : "expression",
-                  "value" : "onAcceptRequest"
+                  "value" : "onAcceptQuotation"
                 },
                 "dataFromSuccess" : {
                   "type" : "variable",
@@ -900,9 +822,6 @@
                   "type" : "interpolation",
                   "value" : "/bonita/apps/procurement"
                 },
-                "removeItem" : {
-                  "type" : "variable"
-                },
                 "assign" : {
                   "type" : "constant",
                   "value" : false
@@ -919,12 +838,15 @@
                   "type" : "constant",
                   "value" : ""
                 },
+                "removeItem" : {
+                  "type" : "variable"
+                },
                 "allowHTML" : {
                   "type" : "constant",
                   "value" : true
                 }
               },
-              "reference" : "c0885e7d-aaca-42b7-ae9f-42e45b09c20b",
+              "reference" : "5e7c92fa-80bc-4bc1-b7e0-8d9541bb5dcf",
               "hasValidationError" : false,
               "id" : "pbButton"
             }
@@ -942,7 +864,7 @@
                 },
                 "hidden" : {
                   "type" : "expression",
-                  "value" : "formError  == null"
+                  "value" : "formError == null"
                 },
                 "message" : {
                   "type" : "constant",
@@ -965,7 +887,7 @@
                   "value" : "Error:"
                 }
               },
-              "reference" : "23f28b74-59e3-490b-9936-4c2d04597f61",
+              "reference" : "76bba4cd-8f6d-4693-bdb0-7fdf93f49736",
               "hasValidationError" : false,
               "id" : "customAlert"
             }
@@ -974,16 +896,6 @@
       }
     ]
   ],
-  "assets" : [
-    {
-      "id" : "96a83787-48c2-4a0a-ae2a-0920bb0b6577",
-      "name" : "style.css",
-      "type" : "css",
-      "order" : 1,
-      "external" : false
-    }
-  ],
-  "inactiveAssets" : [ ],
   "variables" : {
     "request" : {
       "type" : "url",
@@ -992,10 +904,31 @@
       ],
       "exposed" : false
     },
-    "sentData" : {
+    "onDismissError" : {
+      "type" : "expression",
+      "value" : [
+        "$data.formError = null;"
+      ],
+      "exposed" : false
+    },
+    "onAbortRequest" : {
+      "type" : "expression",
+      "value" : [
+        "return {\"selectedSupplierId\" : null};"
+      ],
+      "exposed" : false
+    },
+    "selectedQuotation" : {
       "type" : "json",
       "value" : [
-        "{\"price\" : null, \"comments\" : null}"
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "quotations" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.quotations_ref.link}}"
       ],
       "exposed" : false
     },
@@ -1006,24 +939,8 @@
       ],
       "exposed" : false
     },
-    "onAcceptRequest" : {
-      "type" : "expression",
-      "value" : [
-        "var sent = angular.copy($data.sentData);",
-        "sent.hasSupplierAccepted = true;",
-        "return sent;"
-      ],
-      "exposed" : false
-    },
     "formError" : {
       "type" : "constant",
-      "exposed" : false
-    },
-    "quotation" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.quotation_ref.link}}"
-      ],
       "exposed" : false
     },
     "taskId" : {
@@ -1033,18 +950,31 @@
       ],
       "exposed" : false
     },
-    "onRejectQuotation" : {
+    "onAcceptQuotation" : {
       "type" : "expression",
       "value" : [
-        "var sent = angular.copy($data.sentData);",
-        "sent.hasSupplierAccepted = false;",
-        "return sent;"
+        "return {\"selectedSupplierId\" : $data.selectedQuotation.supplier.persistenceId};"
       ],
       "exposed" : false
     }
   },
-  "hasValidationError" : false,
-  "uuid" : "c28d545b-6571-4107-b577-a547a8c21915",
-  "type" : "form",
-  "description" : "Page generated with Bonita UI designer"
+  "assets" : [
+    {
+      "id" : "87bc5b78-17e2-4742-bb80-073c69648986",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "7b9ed49f-b3d7-483f-bf57-3ffee8bd5569",
+      "name" : "customPageAssets.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
 }

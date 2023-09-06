@@ -1,9 +1,12 @@
 {
-  "modelVersion" : "2.3",
-  "previousArtifactVersion" : "2.2",
   "id" : "procurementRequestCreationForm",
   "name" : "procurementRequestCreationForm",
-  "lastUpdate" : 1665062134541,
+  "type" : "form",
+  "uuid" : "da18acb0-d393-46d7-90ca-168bccf8904b",
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "2.3",
+  "lastUpdate" : 1694006049254,
+  "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
       {
@@ -961,16 +964,6 @@
       }
     ]
   ],
-  "assets" : [
-    {
-      "id" : "81921753-a8e1-4dd4-bf3c-f56386c832ac",
-      "name" : "style.css",
-      "type" : "css",
-      "order" : 1,
-      "external" : false
-    }
-  ],
-  "inactiveAssets" : [ ],
   "variables" : {
     "onDismissError" : {
       "type" : "expression",
@@ -1029,8 +1022,16 @@
       "exposed" : false
     }
   },
-  "hasValidationError" : false,
-  "uuid" : "da18acb0-d393-46d7-90ca-168bccf8904b",
-  "type" : "form",
-  "description" : "Page generated with Bonita UI designer"
+  "assets" : [
+    {
+      "id" : "81921753-a8e1-4dd4-bf3c-f56386c832ac",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
 }

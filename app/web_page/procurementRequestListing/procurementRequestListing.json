@@ -5,7 +5,7 @@
   "uuid" : "b003d7d9-5441-4071-b6df-71c0c4f470f8",
   "modelVersion" : "2.4",
   "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1694006324697,
+  "lastUpdate" : 1711111258932,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -1316,14 +1316,14 @@
     "procurementProcesses" : {
       "type" : "url",
       "value" : [
-        "/bonita/API/bpm/process?c=1&p=0&f=name=Procurement%20request&o=deploymentDate"
+        "/bonita/API/bpm/process?c=1&p=0&f=user_id={{ session.user_id }}&f=name=Procurement%20request&o=deploymentDate"
       ],
       "exposed" : false
     },
     "tasksFromRequest" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/humanTask?c=1&p=0&f=caseId={{request.caseId}}"
+        "../API/bpm/humanTask?c=1&p=0&f=caseId={{request.caseId}}&f=user_id={{ session.user_id }}"
       ],
       "exposed" : false
     },
@@ -1350,6 +1350,13 @@
       "type" : "url",
       "value" : [
         "../API/bdm/businessData/com.company.model.Quotation?p=0&c=20&q=findFromRequest&f=id={{request.persistenceId}}"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
       ],
       "exposed" : false
     }

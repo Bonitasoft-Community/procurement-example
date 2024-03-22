@@ -5,7 +5,7 @@
   "uuid" : "22b348dd-65be-4592-b6c3-fd0292899189",
   "modelVersion" : "2.4",
   "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1694006259173,
+  "lastUpdate" : 1711111135955,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -562,7 +562,7 @@
     "createSupplierProcesses" : {
       "type" : "url",
       "value" : [
-        "/bonita/API/bpm/process?c=1&p=0&f=name=Create%20supplier&o=deploymentDate"
+        "/bonita/API/bpm/process?c=1&p=0&f=user_id={{session.user_id}}&f=name=Create%20supplier&o=deploymentDate"
       ],
       "exposed" : false
     },
@@ -574,6 +574,13 @@
       "type" : "url",
       "value" : [
         "../API/bdm/businessData/com.company.model.Supplier?p=0&c=20&q=find"
+      ],
+      "exposed" : false
+    },
+    "session" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
       ],
       "exposed" : false
     }

@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bonitasoft.example</groupId>
     <artifactId>procurement-example-parent</artifactId>
-    <version>3.0</version>
+    <version>3.1</version>
   </parent>
   <artifactId>procurement-example-bdm-parent</artifactId>
   <packaging>pom</packaging>

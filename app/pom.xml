@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bonitasoft.example</groupId>
     <artifactId>procurement-example-parent</artifactId>
-    <version>3.1</version>
+    <version>3.2</version>
   </parent>
   <artifactId>procurement-example</artifactId>
   <name>procurement-example</name>
@@ -89,17 +89,12 @@
     <dependency>
       <groupId>org.bonitasoft.connectors</groupId>
       <artifactId>bonita-connector-document-converter</artifactId>
-      <version>2.2.0</version>
+      <version>2.3.0</version>
     </dependency>
     <dependency>
       <groupId>org.bonitasoft.connectors</groupId>
       <artifactId>bonita-connector-document-templating</artifactId>
-      <version>2.2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.xmlbeans</groupId>
-      <artifactId>xmlbeans</artifactId>
-      <version>3.0.1</version>
+      <version>2.3.0</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>

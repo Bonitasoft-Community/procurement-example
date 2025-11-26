@@ -3,9 +3,9 @@
   "name" : "supplierListing",
   "type" : "page",
   "uuid" : "22b348dd-65be-4592-b6c3-fd0292899189",
-  "modelVersion" : "2.4",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1711111135955,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1764166408150,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

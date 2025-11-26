@@ -3,9 +3,9 @@
   "name" : "procurementRequestListing",
   "type" : "page",
   "uuid" : "b003d7d9-5441-4071-b6df-71c0c4f470f8",
-  "modelVersion" : "2.4",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1711111258932,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1764166408010,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

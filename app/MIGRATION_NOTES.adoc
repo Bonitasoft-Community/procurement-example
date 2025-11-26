@@ -1,3 +1,55 @@
+== Migration notes (November 26, 2025 at 3:13:30 PM CET)
+
+=== Additions
+
+* Bonita Admin Application has been added in the project extensions.
+* `javax.persistence:javax.persistence-api` provided dependency has been added to the BDM dao-client module.
+
+=== Updates
+
+* `.gitignore` file has been updated.
+* `app/.gitignore` file has been updated.
+* This project now depends on the Bonita project parent pom. This parent pom configures all the required plugins and dependencies versions for a given Bonita version.
+* Rest API Extensions and Themes projects have been moved in the project layout to benefit from the Maven multi module approach. It means that files location inside the project have changed.  It is a technical change and will not impact the design usage in Bonita Studio.New maven modules and their respective `pom.xml` files are *reserved for internal Studio use*.
+* Project's extensions are now build in their own maven module. While it does not impact the design usage, this internal change allow the usage of a standard Maven build lifecycle.  All extensions share the same `version` and `groupId` of the parent project. It is enforced by the format of the Bonita project and must not be changed.
+* Application module build configuration has been updated to support Maven build.
+* Bdm model module build configuration has been updated to support Maven build.
+* Required Java version updated to `17`. Make sure that your third party dependencies are compliant with Java 17.
+* Procurement_application.xml application descriptor has been migrated to the latest schema version.
+* `default_profile.xml` profile xml schema version has been updated.
+
+=== Removals
+
+* `maven.compiler.release` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `maven-install-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `maven-jar-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `maven-source-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `bonita-project-maven-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `maven-shade-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `maven-compiler-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `build-helper-maven-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `maven-clean-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `project.reporting.outputEncoding` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `flatten-maven-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `bonita.runtime.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `project.build.sourceEncoding` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `maven-resources-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `maven-deploy-plugin.version` property has been removed from parent pom. This property is now inherited from the Bonita Project parent pom.
+* `org.bonitasoft.runtime:bonita-runtime-bom` BOM has been removed from parent pom. This BOM is now inherited from the Bonita Project parent pom.
+* `org.apache.maven.plugins:maven-install-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.apache.maven.plugins:maven-source-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.apache.maven.plugins:maven-compiler-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.apache.maven.plugins:maven-clean-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.apache.maven.plugins:maven-jar-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.apache.maven.plugins:maven-resources-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.apache.maven.plugins:maven-deploy-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.apache.maven.plugins:maven-shade-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.codehaus.mojo:flatten-maven-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.bonitasoft.maven:bonita-project-maven-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* `org.codehaus.mojo:build-helper-maven-plugin` plugin has been removed from parent pom. Its configuration is now inherited from the Bonita Project parent pom.
+* Deprecated provided groovy classes `BonitaUsers`, `BonitaSql`, `BonitaXML` and `BonitaTypes` have been removed.
+* The `flatten-maven-plugin` executions have been removed from the Bdm parent module. They are now inherited from the Bonita project parent.
+
 == Migration notes (6 septembre 2023 à 15:14:10 CEST)
 
 === Updates

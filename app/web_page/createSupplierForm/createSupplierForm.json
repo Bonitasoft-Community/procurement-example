@@ -3,9 +3,9 @@
   "name" : "createSupplierForm",
   "type" : "form",
   "uuid" : "b9f98a70-ae41-45bf-8f73-739fb9e45e2d",
-  "modelVersion" : "2.4",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1694006048991,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1764166407628,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

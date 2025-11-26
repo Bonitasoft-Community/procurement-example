@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<profiles:profiles xmlns:profiles="http://www.bonitasoft.org/ns/profile/6.1">
-    <profile name="User" isDefault="true">
+<?xml version="1.0" encoding="UTF-8"?><profiles:profiles xmlns:profiles="http://documentation.bonitasoft.com/profile-xml-schema/1.0">
+    <profile isDefault="true" name="User">
         <profileMapping>
             <users/>
             <groups/>
@@ -10,7 +9,7 @@
             </roles>
         </profileMapping>
     </profile>
-    <profile name="Administrator" isDefault="true">
+    <profile isDefault="true" name="Administrator">
         <profileMapping>
             <users/>
             <groups/>

@@ -3,9 +3,9 @@
   "name" : "procurementReviewQuotationsForm",
   "type" : "form",
   "uuid" : "d5c2669f-f688-43e6-ace9-dc475ed6833c",
-  "modelVersion" : "2.4",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1694006049293,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1764166408079,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

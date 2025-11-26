@@ -26,6 +26,11 @@
       <groupId>org.bonitasoft.engine</groupId>
       <artifactId>bonita-client</artifactId>
     </dependency>
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

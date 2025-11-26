@@ -3,9 +3,9 @@
   "name" : "procurementCompleteQuotationForm",
   "type" : "form",
   "uuid" : "c28d545b-6571-4107-b577-a547a8c21915",
-  "modelVersion" : "2.4",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1694006049221,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1764166407767,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

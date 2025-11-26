@@ -3,9 +3,9 @@
   "name" : "initSampleProcurementDataForm",
   "type" : "form",
   "uuid" : "50c48546-9ce4-4d8f-9826-4d5b18847d0a",
-  "modelVersion" : "2.4",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1694006049197,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1764166407703,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

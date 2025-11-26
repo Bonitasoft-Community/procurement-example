@@ -3,9 +3,9 @@
   "name" : "procurementRequestCreationForm",
   "type" : "form",
   "uuid" : "da18acb0-d393-46d7-90ca-168bccf8904b",
-  "modelVersion" : "2.4",
-  "previousArtifactVersion" : "2.3",
-  "lastUpdate" : 1694006049254,
+  "modelVersion" : "2.6",
+  "previousArtifactVersion" : "2.4",
+  "lastUpdate" : 1764166407874,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [

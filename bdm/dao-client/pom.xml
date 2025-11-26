@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.bonitasoft.example</groupId>
     <artifactId>procurement-example-bdm-parent</artifactId>
-    <version>3.2</version>
+    <version>4.0</version>
   </parent>
   <artifactId>procurement-example-bdm-dao-client</artifactId>
   <dependencies>
@@ -25,6 +25,11 @@
     <dependency>
       <groupId>org.bonitasoft.engine</groupId>
       <artifactId>bonita-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>

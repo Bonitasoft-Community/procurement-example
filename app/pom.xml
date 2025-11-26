@@ -4,15 +4,15 @@
   <parent>
     <groupId>org.bonitasoft.example</groupId>
     <artifactId>procurement-example-parent</artifactId>
-    <version>3.2</version>
+    <version>4.0</version>
   </parent>
   <artifactId>procurement-example</artifactId>
   <name>procurement-example</name>
   <description>Official Procurement Living Application example for Bonita</description>
   <dependencies>
     <dependency>
-      <groupId>org.bonitasoft.engine</groupId>
-      <artifactId>bonita-common</artifactId>
+      <groupId>com.bonitasoft.engine</groupId>
+      <artifactId>bonita-common-sp</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -102,47 +102,168 @@
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.bonitasoft.web.application</groupId>
+      <artifactId>bonita-admin-application-sp</artifactId>
+      <type>zip</type>
+      <classifier>application</classifier>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-install-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <skipIfEmpty>true</skipIfEmpty>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
+        <artifactId>gmavenplus-plugin</artifactId>
+        <groupId>org.codehaus.gmavenplus</groupId>
         <executions>
           <execution>
-            <phase>generate-sources</phase>
+            <id>bonita-project-properties</id>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>generate-application-properties</id>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>generate-classpath-assembly</id>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>bonita-project-maven-plugin</artifactId>
+        <groupId>org.bonitasoft.maven</groupId>
+        <executions>
+          <execution>
+            <id>process-bonita-artifacts</id>
+            <goals>
+              <goal>copy-provided-pages</goal>
+              <goal>business-archive</goal>
+              <goal>uid-page</goal>
+              <goal>merge-configuration</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <groupId>org.codehaus.mojo</groupId>
+        <executions>
+          <execution>
+            <id>add-source-folder</id>
             <goals>
               <goal>add-source</goal>
             </goals>
             <configuration>
               <sources>
-                <source>src-connectors</source>
-                <source>src-filters</source>
                 <source>src-groovy</source>
-                <source>src-providedGroovy</source>
+                <source>${project.build.directory}/generated-groovy-sources</source>
               </sources>
             </configuration>
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>application-archive</id>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>application-classpath</id>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>bundle</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>prepare-bundle-enterprise</id>
+                <goals>
+                  <goal>unpack</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.gmavenplus</groupId>
+            <artifactId>gmavenplus-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>configure-bundle</id>
+                <goals>
+                  <goal>execute</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>bundle-archive-enterprise</id>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>docker</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.gmavenplus</groupId>
+            <artifactId>gmavenplus-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>generate-docker-resources</id>
+                <goals>
+                  <goal>execute</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>build-image</id>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+      <properties>
+        <docker.baseImageRepository>bonitasoft.jfrog.io/docker/bonita-subscription</docker.baseImageRepository>
+      </properties>
+    </profile>
+  </profiles>
 </project>

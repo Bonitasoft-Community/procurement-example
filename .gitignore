@@ -1,3 +1,4 @@
+
 bin
 .classpath
 .settings
@@ -6,3 +7,7 @@ target/
 dependency-reduced-pom.xml
 pom.xml.versionsBackup
 .idea
+
+
+node/
+node_modules/

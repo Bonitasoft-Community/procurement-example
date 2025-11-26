@@ -8,7 +8,7 @@
   </parent>
   <groupId>org.bonitasoft.example</groupId>
   <artifactId>procurement-example-parent</artifactId>
-  <version>3.2</version>
+  <version>4.0</version>
   <packaging>pom</packaging>
   <licenses>
     <license />

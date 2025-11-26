@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/bpm/parameter" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
-  <process:MainProcess xmi:id="_yBZV0BKsEeWPr7pxbi20Rg" name="Procurement request" bonitaModelVersion="8">
+  <process:MainProcess xmi:id="_yBZV0BKsEeWPr7pxbi20Rg" name="Procurement request" bonitaModelVersion="9">
     <elements xmi:type="process:Pool" xmi:id="_yBZV0RKsEeWPr7pxbi20Rg" documentation="Process for a procurement request" name="Procurement request">
       <elements xmi:type="process:Lane" xmi:id="_yBZ84BKsEeWPr7pxbi20Rg" name="Requestor" actor="_yBZ9gxKsEeWPr7pxbi20Rg">
         <elements xmi:type="process:StartEvent" xmi:id="_yBZ84RKsEeWPr7pxbi20Rg" name="Specify need &amp; identify suitable suppliers" outgoing="_el_woNofEem3nK4z4KeV0A">
@@ -57,7 +57,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_j3FiJD79EeeFUpJtjfPkKQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_j3FiJT79EeeFUpJtjfPkKQ" name="" content="" returnTypeFixed="true"/>
           <connectors xmi:type="process:Connector" xmi:id="_UaHM8FEpEeyRA_m9wzMnTg" name="generateQuotationRequestWord" definitionId="document-templating" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.0.1">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_UaHM8VEpEeyRA_m9wzMnTg" definitionId="document-templating" version="1.0.1" modelVersion="8">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_UaHM8VEpEeyRA_m9wzMnTg" definitionId="document-templating" version="1.0.1" modelVersion="9">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_UaHM8lEpEeyRA_m9wzMnTg" key="documentInput">
                 <expression xmi:type="expression:Expression" xmi:id="_UaHM81EpEeyRA_m9wzMnTg" name="quoteRequestTemplate" content="quoteRequestTemplate" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
                   <referencedElements xmi:type="process:Document" xmi:id="_UaHM9FEpEeyRA_m9wzMnTg" name="quoteRequestTemplate"/>
@@ -114,7 +114,7 @@
             </outputs>
           </connectors>
           <connectors xmi:type="process:Connector" xmi:id="_c97oIFEpEeyRA_m9wzMnTg" name="generatePDFFile" definitionId="document-converter" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.0.2">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_c97oIVEpEeyRA_m9wzMnTg" definitionId="document-converter" version="1.0.2" modelVersion="8">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_c97oIVEpEeyRA_m9wzMnTg" definitionId="document-converter" version="1.0.2" modelVersion="9">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_c97oIlEpEeyRA_m9wzMnTg" key="sourceDocument">
                 <expression xmi:type="expression:Expression" xmi:id="_c97oI1EpEeyRA_m9wzMnTg" name="quoteRequestWord" content="quoteRequestWord" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
                   <referencedElements xmi:type="process:Document" xmi:id="_HhEhIFEtEeyRA_m9wzMnTg" name="quoteRequestWord"/>
@@ -140,7 +140,7 @@
             </outputs>
           </connectors>
           <connectors xmi:type="process:Connector" xmi:id="_selSkFEpEeyRA_m9wzMnTg" documentation="It works for uploading documents smaller than 4MB only. For documents greater than 4MB, you need to use createUploadSession in your POST url" name="uploadWordFile" definitionId="rest-file-put" event="ON_FINISH" ignoreErrors="true" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_selSkVEpEeyRA_m9wzMnTg" definitionId="rest-file-put" version="1.0.0" modelVersion="8">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_selSkVEpEeyRA_m9wzMnTg" definitionId="rest-file-put" version="1.0.0" modelVersion="9">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_selSklEpEeyRA_m9wzMnTg" key="url">
                 <expression xmi:type="expression:Expression" xmi:id="_selSk1EpEeyRA_m9wzMnTg" name="concatenateUploadURL" content="return 'https://graph.microsoft.com/v1.0/drives/'+ sharepointParentFolder + '/root:/Quote%20Requests/'+ sharepointCaseFolder + '/QuoteRequest-'+ request.caseId +'.docx:/content'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
                   <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_hjeJAF6UEeypT86PGIy9Ug" name="request" dataType="_yBZ9ohKsEeWPr7pxbi20Rg" className="com.company.model.Request"/>
@@ -253,7 +253,7 @@
             </outputs>
           </connectors>
           <connectors xmi:type="process:Connector" xmi:id="_29KxUFEpEeyRA_m9wzMnTg" documentation="It works for uploading documents smaller than 4MB only. For documents greater than 4MB, you need to use createUploadSession in your POST url" name="uploadPDFFile" definitionId="rest-file-put" event="ON_FINISH" ignoreErrors="true" definitionVersion="1.0.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_29KxUVEpEeyRA_m9wzMnTg" definitionId="rest-file-put" version="1.0.0" modelVersion="8">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_29KxUVEpEeyRA_m9wzMnTg" definitionId="rest-file-put" version="1.0.0" modelVersion="9">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_29KxUlEpEeyRA_m9wzMnTg" key="url">
                 <expression xmi:type="expression:Expression" xmi:id="_29KxU1EpEeyRA_m9wzMnTg" name="concatenateUploadPDFURL" content="return 'https://graph.microsoft.com/v1.0/drives/'+ sharepointParentFolder +'/root:/Quote%20Requests/'+ sharepointCaseFolder + '/QuoteRequest-'+ request.caseId +'-final.pdf:/content'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
                   <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_nR0y8F6UEeypT86PGIy9Ug" name="request" dataType="_yBZ9ohKsEeWPr7pxbi20Rg" className="com.company.model.Request"/>
@@ -423,7 +423,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_-99EgNohEem3nK4z4KeV0A" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_-99EgtohEem3nK4z4KeV0A" name="" content="" returnTypeFixed="true"/>
           <connectors xmi:type="process:Connector" xmi:id="_lPReIFEnEeyRA_m9wzMnTg" documentation="use this call to generate the Azure AD token that you need to use in the other REST connectors as header" name="generateSharepointToken" definitionId="rest-post" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.3.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_lPReIVEnEeyRA_m9wzMnTg" definitionId="rest-post" version="1.3.0" modelVersion="8">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_lPReIVEnEeyRA_m9wzMnTg" definitionId="rest-post" version="1.3.0" modelVersion="9">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_lPReIlEnEeyRA_m9wzMnTg" key="url">
                 <expression xmi:type="expression:Expression" xmi:id="_lPReI1EnEeyRA_m9wzMnTg" name="prepareOAuthUrl()" content="'https://login.microsoftonline.com/' + sharepointTenant +'/oauth2/v2.0/token'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
                   <referencedElements xmi:type="parameter:Parameter" xmi:id="_SLADEFkWEeyvmZL7s4onFw" name="sharepointTenant" typeClassname="java.lang.String"/>
@@ -528,7 +528,7 @@
             </outputs>
           </connectors>
           <connectors xmi:type="process:Connector" xmi:id="_8sKmYFEnEeyRA_m9wzMnTg" documentation="create a folder named as your case ID" name="createSharepointFolder" definitionId="rest-post" event="ON_ENTER" ignoreErrors="true" definitionVersion="1.3.0">
-            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_8sKmYVEnEeyRA_m9wzMnTg" definitionId="rest-post" version="1.3.0" modelVersion="8">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_8sKmYVEnEeyRA_m9wzMnTg" definitionId="rest-post" version="1.3.0" modelVersion="9">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_8sKmYlEnEeyRA_m9wzMnTg" key="url">
                 <expression xmi:type="expression:Expression" xmi:id="_8sKmY1EnEeyRA_m9wzMnTg" name="urlCreateFolder" content="'https://graph.microsoft.com/v1.0/drives/'+ sharepointParentFolder +'/root:/Quote%20Requests:/children'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
                   <referencedElements xmi:type="parameter:Parameter" xmi:id="_IMi10FnaEeyPio-vlBT1kA" name="sharepointParentFolder" typeClassname="java.lang.String" description="use this parameter to store the ID of the Sharepoint Drive that you need to use as part of the URL for your REST calls&#xD;&#xA;"/>
@@ -659,7 +659,7 @@
         <elements xmi:type="process:TextAnnotation" xmi:id="_8umwsNokEem3nK4z4KeV0A" text="User will select the supplier with the best quotation. If of the supplier is stored in the request business object."/>
         <elements xmi:type="process:TextAnnotation" xmi:id="_KO1bgNolEem3nK4z4KeV0A" text="Update the request status. You may configure the Azure and Sharepoint credentials in the process parameters. "/>
         <filters xmi:type="process:ActorFilter" xmi:id="_zVaWgBTdEeWRxqJe6ExNNg" name="processInitiatorForRequestorLane" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_zVaWgRTdEeWRxqJe6ExNNg" definitionId="bonita-actorfilter-initiator" version="1.0" modelVersion="8">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_zVaWgRTdEeWRxqJe6ExNNg" definitionId="bonita-actorfilter-initiator" version="1.0" modelVersion="9">
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_zVaWghTdEeWRxqJe6ExNNg" key="autoAssign">
               <expression xmi:type="expression:Expression" xmi:id="_j3FiXD79EeeFUpJtjfPkKQ" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
             </parameters>
@@ -794,7 +794,7 @@
         <elements xmi:type="process:TextAnnotation" xmi:id="_kxsroNokEem3nK4z4KeV0A" text="This task update the request status"/>
         <elements xmi:type="process:TextAnnotation" xmi:id="_NLTzsNolEem3nK4z4KeV0A" text="Update the request status to &quot;Aborted&quot;"/>
         <filters xmi:type="process:ActorFilter" xmi:id="_xovZUBTdEeWRxqJe6ExNNg" name="processInitatorForSupplierLane" definitionId="bonita-actorfilter-initiator" definitionVersion="1.0">
-          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_xovZURTdEeWRxqJe6ExNNg" definitionId="bonita-actorfilter-initiator" version="1.0" modelVersion="8">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_xovZURTdEeWRxqJe6ExNNg" definitionId="bonita-actorfilter-initiator" version="1.0" modelVersion="9">
             <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_xovZUhTdEeWRxqJe6ExNNg" key="autoAssign">
               <expression xmi:type="expression:Expression" xmi:id="_j3FiXT79EeeFUpJtjfPkKQ" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
             </parameters>

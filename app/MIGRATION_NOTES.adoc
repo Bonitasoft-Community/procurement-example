@@ -1,3 +1,9 @@
+== Migration notes (November 26, 2025, 3:20:39 PM CET)
+
+=== Updates
+
+* Bonita project parent has been updated from `10.2.4` to `10.3.1`.
+
 == Migration notes (November 26, 2025 at 3:13:30 PM CET)
 
 === Additions

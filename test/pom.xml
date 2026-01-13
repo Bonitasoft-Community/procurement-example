@@ -9,7 +9,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- server.url default value is override by CI configuration -->
 		<server.url>http://localhost:8080</server.url>
-		<bonita.version>7.13.0-SNAPSHOT</bonita.version>
+		<bonita.version>10.1.0</bonita.version>
 	</properties>
 
 	<build>
